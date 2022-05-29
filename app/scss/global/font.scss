@@ -1,0 +1,112 @@
+:root {
+  --font-signature: "Signature";
+  --font-head-kick-regular: "Headkick Regular";
+  --font-head-kick-outline: "Headkick Outline";
+  --font-sunray: "Sunray";
+  --font-titillium-regular: "Titillium Regular";
+  --font-titillium-extralight: "Titillium Extra Light";
+  --font-titillium-light: "Titillium Light";
+  --font-titillium-semibold: "Titillium Semi Bold";
+  --font-titillium-bold: "Titillium Bold";
+}
+
+@font-face {
+  font-family: "Signature";
+  src: url("/font/signature/signature.ttf");
+  src: url("/font/signature/signature.ttf") format("embedded-opentype"),
+    url("/font/signature/signature.ttf") format("woff"),
+    url("/font/signature/signature.ttf") format("truetype"),
+    url("/font/signature/signature.ttf") format("svg");
+  font-style: normal;
+  font-weight: normal;
+}
+
+@font-face {
+  font-family: "Headkick Regular";
+  src: url("/font/headkick/headkick\ regular.ttf");
+  src: url("/font/headkick/headkick\ regular.ttf") format("embedded-opentype"),
+    url("/font/headkick/headkick\ regular.ttf") format("woff"),
+    url("/font/headkick/headkick\ regular.ttf") format("truetype"),
+    url("/font/headkick/headkick\ regular.ttf") format("svg");
+  font-style: normal;
+  font-weight: normal;
+}
+
+@font-face {
+  font-family: "Headkick Outline";
+  src: url("/font/headkick/headkick\ outline.ttf");
+  src: url("/font/headkick/headkick\ outline.ttf") format("embedded-opentype"),
+    url("/font/headkick/headkick\ outline.ttf") format("woff"),
+    url("/font/headkick/headkick\ outline.ttf") format("truetype"),
+    url("/font/headkick/headkick\ outline.ttf") format("svg");
+  font-style: normal;
+  font-weight: normal;
+}
+
+@font-face {
+  font-family: "Sunray";
+  src: url("/font/sunray/sun\ rays.ttf");
+  src: url("/font/sunray/sun\ rays.ttf") format("embedded-opentype"),
+    url("/font/sunray/sun\ rays.ttf") format("woff"),
+    url("/font/sunray/sun\ rays.ttf") format("truetype"),
+    url("/font/sunray/sun\ rays.ttf") format("svg");
+  font-style: normal;
+  font-weight: normal;
+}
+
+@font-face {
+  font-family: "Titillium Regular";
+  src: url("/font/titillium/titillium\ regular.ttf");
+  src: url("/font/titillium/titillium\ regular.ttf") format("embedded-opentype"),
+    url("/font/titillium/titillium\ regular.ttf") format("woff"),
+    url("/font/titillium/titillium\ regular.ttf") format("truetype"),
+    url("/font/titillium/titillium\ regular.ttf") format("svg");
+  font-style: normal;
+  font-weight: normal;
+}
+
+@font-face {
+  font-family: "Titillium Extra Light";
+  src: url("/font/titillium/titillium\ extra\ light.ttf");
+  src: url("/font/titillium/titillium\ extra\ light.ttf")
+      format("embedded-opentype"),
+    url("/font/titillium/titillium\ extra\ light.ttf") format("woff"),
+    url("/font/titillium/titillium\ extra\ light.ttf") format("truetype"),
+    url("/font/titillium/titillium\ extra\ light.ttf") format("svg");
+  font-style: normal;
+  font-weight: normal;
+}
+
+@font-face {
+  font-family: "Titillium Light";
+  src: url("/font/titillium/titillium\ light.ttf");
+  src: url("/font/titillium/titillium\ light.ttf") format("embedded-opentype"),
+    url("/font/titillium/titillium\ light.ttf") format("woff"),
+    url("/font/titillium/titillium\ light.ttf") format("truetype"),
+    url("/font/titillium/titillium\ light.ttf") format("svg");
+  font-style: normal;
+  font-weight: normal;
+}
+
+@font-face {
+  font-family: "Titillium Semi Bold";
+  src: url("/font/titillium/titillium\ semi\ bold.ttf");
+  src: url("/font/titillium/titillium\ semi\ bold.ttf")
+      format("embedded-opentype"),
+    url("/font/titillium/titillium\ semi\ bold.ttf") format("woff"),
+    url("/font/titillium/titillium\ semi\ bold.ttf") format("truetype"),
+    url("/font/titillium/titillium\ semi\ bold.ttf") format("svg");
+  font-style: normal;
+  font-weight: normal;
+}
+
+@font-face {
+  font-family: "Titillium Bold";
+  src: url("/font/titillium/titillium\ bold.ttf");
+  src: url("/font/titillium/titillium\ bold.ttf") format("embedded-opentype"),
+    url("/font/titillium/titillium\ bold.ttf") format("woff"),
+    url("/font/titillium/titillium\ bold.ttf") format("truetype"),
+    url("/font/titillium/titillium\ bold.ttf") format("svg");
+  font-style: normal;
+  font-weight: normal;
+}

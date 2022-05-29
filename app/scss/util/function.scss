@@ -1,0 +1,16 @@
+// this allow us to either include the px unit or not in the function call
+$browser-sync: 16;
+@function em($pixels, $context: $browser-sync) {
+  @if (unitless($pixels)) {
+    $pixels: $pixels * 1px;
+  }
+  @if (unitless($context)) {
+    $context: $context * 1px;
+  }
+  @return$pixels /$context*1em;
+}
+
+// unmodified approach of px to em
+// @function em($pixels, $context: 16){
+//   @return (math.div($pixels, $context) * 1em);
+// }

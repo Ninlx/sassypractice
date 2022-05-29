@@ -1,0 +1,7 @@
+### avoid adding unused stuff to our git repo from the node package manager
+
+## ignore everything inside node modules
+node_modules/
+
+## ignore
+dist/
