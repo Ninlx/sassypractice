@@ -1,5 +1,11 @@
+@use "../util" as *;
+
 .header .navbar .navbar-nav .nav-item .nav-link {
-  font-size: em(26px);
+  font-size: em(14);
   text-transform: uppercase;
-  font-family: var(--font-head-kick-regular);
+  font-family: var(--font-titillium-semibold);
+}
+
+.header .navbar .navbar-nav .nav-item.function {
+  text-decoration: line-through;
 }
