@@ -1,11 +1,29 @@
 @use "../util" as *;
 
-.header .navbar .navbar-nav .nav-item .nav-link {
-  font-size: em(14);
-  text-transform: uppercase;
-  font-family: var(--font-titillium-semibold);
-}
-
-.header .navbar .navbar-nav .nav-item.function {
-  text-decoration: line-through;
+.header {
+  &__navbar svg {
+    color: var(--primary);
+    cursor: pointer;
+    transition: color 200ms linear;
+  }
+  &__navbar svg:hover {
+    color: var(--danger);
+  }
+  &__brand {
+    font-family: var(--font-kufication);
+  }
+  &__item a:is(:link, :active, :visited) {
+    color: var(--dark);
+  }
+  &__item a:is(:link, :active, :visited).function {
+    font-family: var(--font-titillium-regular);
+    font-size: em(16);
+    letter-spacing: em(1);
+    margin: 0 em(5);
+    color: var(--light);
+    background: var(--focus-background);
+  }
+  &__item.function a {
+    color: var(--dark);
+  }
 }

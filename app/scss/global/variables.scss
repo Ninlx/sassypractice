@@ -1,0 +1,47 @@
+:root {
+  --font-signature: "Signature";
+  --font-spotyfied: "Spotyfied";
+  --font-galaxus: "Galaxus";
+  --font-mangaka: "Mangaka";
+  --font-kufication: "Kufication";
+  --font-memesique: "Memesique";
+  --font-titillium-regular: "Titillium Regular";
+  --font-titillium-light: "Titillium Light";
+  --font-titillium-light-italic: "Titillium Light Italic";
+  --font-titillium-bold: "Titillium Bold";
+  --font-titillium-semibold: "Titillium Semi Bold";
+
+  --primary: #0d6efd;
+  --secondary: #6c757d;
+  --success: #198754;
+  --info: #0dcaf0;
+  --warning: #ffc107;
+  --danger: #dc3545;
+  --light: #f8f9fa;
+  --dark: #212529;
+
+  --primary-background: linear-gradient(225deg, #ffd89b 10%, #19547b 70%);
+  --secondary-background: linear-gradient(45deg, #ffd89b 10%, #19547b 70%);
+  --focus-background: linear-gradient(45deg, #ffd89b 10%, #dc3545 70%);
+
+  --btn-hover-boxshadow: rgba(0, 0, 0, 0.099) 6px 8px 8px 0px,
+    rgba(0, 0, 0, 0.099) 6px 8px 8px 0px, rgba(0, 0, 0, 0.099) -6px 8px 8px 0px,
+    rgba(0, 0, 0, 0.099) -6px 8px 8px 0px;
+  --btn-focus-boxshadow: rgba(0, 0, 0, 0.099) 0px 8px 8px 0px,
+    rgba(0, 0, 0, 0.099) 0px 8px 8px 0px;
+
+  --card-boxshadow: rgba(0, 0, 0, 0.4) 0px 30px 90px;
+  --box-shadow: rgba(50, 50, 93, 0.25) 0px 50px 100px -20px,
+    rgba(0, 0, 0, 0.3) 0px 30px 60px -30px;
+}
+
+#dark-mode {
+  --primary: #0d6efd;
+  --secondary: #6c757d;
+  --success: #198754;
+  --info: #0dcaf0;
+  --warning: #ffc107;
+  --danger: #dc3545;
+  --light: #f8f9fa;
+  --dark: #212529;
+}

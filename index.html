@@ -31,47 +31,64 @@
   <body>
     <!-- -------------------- header section -------------------- -->
     <section class="header" id="header">
-      <nav class="navbar navbar-expand-lg bg-light">
-        <div class="container-fluid py-2 px-5">
-          <a class="navbar-brand text-uppercase" href="#">portfolio</a>
+      <nav class="navbar header__navbar navbar-expand-lg p-0">
+        <div class="container-fluid py-4 px-0">
+          <a class="navbar-brand header__brand text-uppercase m-0 p-0 fs-1" href="#">portfolio</a>
           <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
             <span class="navbar-toggler-icon"></span>
           </button>
           <div class="collapse navbar-collapse" id="navbarNav">
             <div class="ms-auto"></div>
-            <ul class="navbar-nav">
-              <li class="nav-item function">
-                <a class="nav-link active" aria-current="page" href="#">home</a>
+            <ul class="navbar-nav text-uppercase pe-5">
+              <li class="nav-item header__item">
+                <a class="nav-link px-2 py-0" aria-current="page" href="index.html">home</a>
               </li>
-              <li class="nav-item">
-                <a class="nav-link" href="#">service</a>
+              <li class="nav-item header__item">
+                <a class="nav-link px-2 py-0" href="src/service.html">service</a>
               </li>
-              <li class="nav-item">
-                <a class="nav-link" href="#">blogs</a>
+              <li class="nav-item header__item">
+                <a class="nav-link px-2 py-0" href="src/about.html">about</a>
               </li>
-              <li class="nav-item">
-                <a class="nav-link" href="#">review</a>
+              <li class="nav-item header__item">
+                <a class="nav-link px-2 py-0" href="src/blogs.html">blogs</a>
               </li>
-              <li class="nav-item">
-                <a class="nav-link" href="#">contact</a>
+              <li class="nav-item header__item">
+                <a class="nav-link px-2 py-0" href="src/contact.html">contact</a>
               </li>
             </ul>
-            <i class="fas fa-plane-arrival"></i>
           </div>
         </div>
+        <i class="fas fa-plane-departure fs-3"></i>
       </nav>
     </section>
     <!-- -------------------- banner section -------------------- -->
     <section class="banner" id="banner">
       <div class="container">
         <div class="row">
-          <!-- left content col-xl-6 -->
-          <div class="col-xl-6 col-lg-6 col-md-12">
+          <div class="col-xl-6 col-lg-6 col-md-12 banner__content">
+            <h3 class="text-capitalize banner__sub-title">hey</h3>
+            <h1 class="text-uppercase banner__title-name mb-0">i am <span>jeffern</span></h1>
+            <h3 class="text-uppercase banner__job-title">junior frontend web developer</h3>
+            <div class="banner__btn">
+              <button type="submit" class="banner__button">hire</button>
+              <button type="submit" class="banner__button">get cv</button>
+            </div>
+          </div>
+          <div class="col-xl-6 col-lg-6 col-md-12 banner__content">
+            <img src="img/banner/banner-image.png" alt="Image" class="img-fluid">
+          </div>
+        </div>
+      </div>
+    </section>
+    <!-- -------------------- service section -------------------- -->
+    <section class="service" id="service">
+      <div class="container-fluid">
+        <div class="row">
+          <div class="col-lg-6 col-md-12">
 
           </div>
-          <!-- right content col-xl-6 -->
-          <div class="col-xl-6 col-lg-6 col-md-12 pt-5">
-            <img src="img/banner/banner-image.png" alt="Image" class="img-fluid">
+          <div class="col-lg-6 col-md-12">
+
           </div>
         </div>
       </div>

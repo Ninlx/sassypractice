@@ -1,0 +1,67 @@
+@use "../util" as *;
+
+.banner {
+  &__content {
+    padding-top: em(95);
+  }
+  &__content:last-of-type {
+    padding-top: em(30);
+  }
+  &__sub-title {
+    font-family: var(--font-signature);
+    font-size: em(18);
+    font-weight: bold;
+  }
+  &__sub-title::after {
+    content: "";
+    display: inline-block;
+    height: em(1);
+    width: 20vw;
+    margin-left: em(10);
+    background: var(--dark);
+  }
+  &__title-name {
+    font-family: var(--font-galaxus);
+    font-size: em(110);
+  }
+  &__title-name span {
+    font-family: var(--font-galaxus);
+    color: var(--primary);
+    display: block;
+    margin: em(-7) auto em(-4) auto;
+    padding-left: em(4.4);
+  }
+  &__job-title {
+    font-family: var(--font-memesique);
+    font-size: em(30);
+    letter-spacing: em(1);
+  }
+  &__btn {
+    padding-top: em(20);
+  }
+  &__button {
+    color: var(--light);
+    text-transform: uppercase;
+    padding: em(7) em(32);
+    background: var(--primary-background);
+    border-radius: em(5);
+    transition: all 300ms linear;
+    font-family: var(--font-titillium-semibold);
+    font-size: em(18);
+    letter-spacing: em(1);
+  }
+  &__button:first-of-type {
+    background: var(--secondary-background);
+    margin-right: em(12.555);
+  }
+  &__button:hover {
+    background: transparent;
+    box-shadow: var(--btn-hover-boxshadow);
+    color: var(--dark);
+  }
+  &__button:focus {
+    background: var(--focus-background);
+    box-shadow: var(--btn-focus-boxshadow);
+    transform: scale(0.966);
+  }
+}

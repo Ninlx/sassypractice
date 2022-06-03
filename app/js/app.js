@@ -1,8 +1,11 @@
-const body = (document.querySelector("body").style.background = "#282828");
-$(document).ready(function () {
-  $("body").css("color", "#282828");
+$(function () {
+  $("body").css("background", "#e2e2e2");
 });
 
-$(document).on('click', '.header .navbar .navbar-nav .nav-item', function(){
-  $(this).addClass('function').siblings().removeClass('function');
-})
+const activePage = window.location.pathname;
+const navlinks = document.querySelectorAll("nav a");
+navlinks.forEach((link) => {
+  if (link.href.includes(`${activePage}`)) {
+    link.classList.add("function");
+  }
+});

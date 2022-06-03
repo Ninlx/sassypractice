@@ -1,15 +1,3 @@
-:root {
-  --font-signature: "Signature";
-  --font-head-kick-regular: "Headkick Regular";
-  --font-head-kick-outline: "Headkick Outline";
-  --font-sunray: "Sunray";
-  --font-titillium-regular: "Titillium Regular";
-  --font-titillium-extralight: "Titillium Extra Light";
-  --font-titillium-light: "Titillium Light";
-  --font-titillium-semibold: "Titillium Semi Bold";
-  --font-titillium-bold: "Titillium Bold";
-}
-
 @font-face {
   font-family: "Signature";
   src: url("/font/signature/signature.ttf");
@@ -17,39 +5,6 @@
     url("/font/signature/signature.ttf") format("woff"),
     url("/font/signature/signature.ttf") format("truetype"),
     url("/font/signature/signature.ttf") format("svg");
-  font-style: normal;
-  font-weight: normal;
-}
-
-@font-face {
-  font-family: "Headkick Regular";
-  src: url("/font/headkick/headkick\ regular.ttf");
-  src: url("/font/headkick/headkick\ regular.ttf") format("embedded-opentype"),
-    url("/font/headkick/headkick\ regular.ttf") format("woff"),
-    url("/font/headkick/headkick\ regular.ttf") format("truetype"),
-    url("/font/headkick/headkick\ regular.ttf") format("svg");
-  font-style: normal;
-  font-weight: normal;
-}
-
-@font-face {
-  font-family: "Headkick Outline";
-  src: url("/font/headkick/headkick\ outline.ttf");
-  src: url("/font/headkick/headkick\ outline.ttf") format("embedded-opentype"),
-    url("/font/headkick/headkick\ outline.ttf") format("woff"),
-    url("/font/headkick/headkick\ outline.ttf") format("truetype"),
-    url("/font/headkick/headkick\ outline.ttf") format("svg");
-  font-style: normal;
-  font-weight: normal;
-}
-
-@font-face {
-  font-family: "Sunray";
-  src: url("/font/sunray/sun\ rays.ttf");
-  src: url("/font/sunray/sun\ rays.ttf") format("embedded-opentype"),
-    url("/font/sunray/sun\ rays.ttf") format("woff"),
-    url("/font/sunray/sun\ rays.ttf") format("truetype"),
-    url("/font/sunray/sun\ rays.ttf") format("svg");
   font-style: normal;
   font-weight: normal;
 }
@@ -66,24 +21,35 @@
 }
 
 @font-face {
-  font-family: "Titillium Extra Light";
-  src: url("/font/titillium/titillium\ extra\ light.ttf");
-  src: url("/font/titillium/titillium\ extra\ light.ttf")
-      format("embedded-opentype"),
-    url("/font/titillium/titillium\ extra\ light.ttf") format("woff"),
-    url("/font/titillium/titillium\ extra\ light.ttf") format("truetype"),
-    url("/font/titillium/titillium\ extra\ light.ttf") format("svg");
-  font-style: normal;
-  font-weight: normal;
-}
-
-@font-face {
   font-family: "Titillium Light";
   src: url("/font/titillium/titillium\ light.ttf");
   src: url("/font/titillium/titillium\ light.ttf") format("embedded-opentype"),
     url("/font/titillium/titillium\ light.ttf") format("woff"),
     url("/font/titillium/titillium\ light.ttf") format("truetype"),
     url("/font/titillium/titillium\ light.ttf") format("svg");
+  font-style: normal;
+  font-weight: normal;
+}
+
+@font-face {
+  font-family: "Titillium Light Italic";
+  src: url("/font/titillium/titillium\ light\ italic.ttf");
+  src: url("/font/titillium/titillium\ light\ italic.ttf")
+      format("embedded-opentype"),
+    url("/font/titillium/titillium\ light\ italic.ttf") format("woff"),
+    url("/font/titillium/titillium\ light\ italic.ttf") format("truetype"),
+    url("/font/titillium/titillium\ light\ italic.ttf") format("svg");
+  font-style: normal;
+  font-weight: normal;
+}
+
+@font-face {
+  font-family: "Titillium Bold";
+  src: url("/font/titillium/titillium\ bold.ttf");
+  src: url("/font/titillium/titillium\ bold.ttf") format("embedded-opentype"),
+    url("/font/titillium/titillium\ bold.ttf") format("woff"),
+    url("/font/titillium/titillium\ bold.ttf") format("truetype"),
+    url("/font/titillium/titillium\ bold.ttf") format("svg");
   font-style: normal;
   font-weight: normal;
 }
@@ -101,12 +67,56 @@
 }
 
 @font-face {
-  font-family: "Titillium Bold";
-  src: url("/font/titillium/titillium\ bold.ttf");
-  src: url("/font/titillium/titillium\ bold.ttf") format("embedded-opentype"),
-    url("/font/titillium/titillium\ bold.ttf") format("woff"),
-    url("/font/titillium/titillium\ bold.ttf") format("truetype"),
-    url("/font/titillium/titillium\ bold.ttf") format("svg");
+  font-family: "Galaxus";
+  src: url("/font/galaxus/galaxus.otf");
+  src: url("/font/galaxus/galaxus.otf") format("embedded-opentype"),
+    url("/font/galaxus/galaxus.otf") format("woff"),
+    url("/font/galaxus/galaxus.otf") format("truetype"),
+    url("/font/galaxus/galaxus.otf") format("svg");
+  font-style: normal;
+  font-weight: normal;
+}
+
+@font-face {
+  font-family: "Spotyfied";
+  src: url("/font/spotyfied/spotyfied.ttf");
+  src: url("/font/spotyfied/spotyfied.ttf") format("embedded-opentype"),
+    url("/font/spotyfied/spotyfied.ttf") format("woff"),
+    url("/font/spotyfied/spotyfied.ttf") format("truetype"),
+    url("/font/spotyfied/spotyfied.ttf") format("svg");
+  font-style: normal;
+  font-weight: normal;
+}
+
+@font-face {
+  font-family: "Mangaka";
+  src: url("/font/mangaka/mangaka.otf");
+  src: url("/font/mangaka/mangaka.otf") format("embedded-opentype"),
+    url("/font/mangaka/mangaka.otf") format("woff"),
+    url("/font/mangaka/mangaka.otf") format("truetype"),
+    url("/font/mangaka/mangaka.otf") format("svg");
+  font-style: normal;
+  font-weight: normal;
+}
+
+@font-face {
+  font-family: "Kufication";
+  src: url("/font/kufication/kufication.ttf");
+  src: url("/font/kufication/kufication.ttf") format("embedded-opentype"),
+    url("/font/kufication/kufication.ttf") format("woff"),
+    url("/font/kufication/kufication.ttf") format("truetype"),
+    url("/font/kufication/kufication.ttf") format("svg");
+  font-style: normal;
+  font-weight: normal;
+}
+
+@font-face {
+  font-family: "Memesique";
+  src: url("/font/memesique/memesique.ttf");
+  src: url("/font/memesique/memesique.ttf") format("embedded-opentype"),
+    url("/font/memesique/memesique.ttf") format("woff"),
+    url("/font/memesique/memesique.ttf") format("truetype"),
+    url("/font/memesique/memesique.ttf") format("svg");
   font-style: normal;
   font-weight: normal;
 }

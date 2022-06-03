@@ -1,0 +1,46 @@
+@use "../util" as *;
+
+::-webkit-scrollbar {
+  display: none;
+}
+
+::-webkit-scrollbar-thumb {
+  display: none;
+}
+
+::-webkit-scrollbar-track {
+  display: none;
+}
+
+*::selection {
+  user-select: none;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  -webkit-user-drag: none;
+}
+
+* {
+  outline: none;
+  border: none;
+}
+
+*::before,
+*::after {
+  text-decoration: none;
+}
+
+html {
+  font-size: 100%;
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  padding: 0;
+  box-sizing: inherit;
+}
+
+section {
+  padding: em(0) 9%;
+}
