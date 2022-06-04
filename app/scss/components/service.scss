@@ -1,0 +1,16 @@
+@use "../util" as *;
+
+.service {
+  padding-top: em(100);
+  &__content h2 {
+    font-family: var(--font-galaxus);
+    font-size: em(40);
+    word-spacing: em(1.2);
+    margin-bottom: em(-3);
+  }
+  &__paragraph {
+    font-family: var(--font-titillium-light);
+    letter-spacing: em(1);
+    line-height: 1.6;
+  }
+}

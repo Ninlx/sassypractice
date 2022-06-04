@@ -31,50 +31,59 @@
   <body>
     <!-- -------------------- header section -------------------- -->
     <section class="header" id="header">
-      <nav class="navbar navbar-expand-lg p-0">
-        <div class="container-fluid py-3 px-0">
-          <a class="navbar-brand header__brand text-uppercase m-0 p-0 fs-1" href="#">portfolio</a>
-          <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
-            <span class="navbar-toggler-icon"></span>
-          </button>
-          <div class="collapse navbar-collapse" id="navbarNav">
-            <div class="ms-auto"></div>
-            <ul class="navbar-nav text-uppercase pe-5">
-              <li class="nav-item header__item function">
-                <a class="nav-link py-0 px-1" aria-current="page" href="#header">home</a>
+      <div class="container px-0">
+        <div class="header__wrapper d-flex align-items-center justify-content-between">
+          <div class="header__brand">
+            <a href="#" class="text-uppercase fs-1 text-dark fw-bold text-decoration-none">portfolio</a>
+          </div>
+          <nav class="header__navbar ms-auto me-5">
+            <ul class="header__nav d-flex list-unstyled text-uppercase mb-0 ps-0">
+              <li class="header__items function">
+                <a href="#" class="header__links text-dark">home</a>
               </li>
-              <li class="nav-item header__item">
-                <a class="nav-link py-0 px-1" href="#service">service</a>
+              <li class="header__items">
+                <a href="#service" class="header__links text-dark">service</a>
               </li>
-              <li class="nav-item header__item">
-                <a class="nav-link py-0 px-1" href="#about">about</a>
+              <li class="header__items">
+                <a href="#about" class="header__links text-dark">about</a>
               </li>
-              <li class="nav-item header__item">
-                <a class="nav-link py-0 px-1" href="#blogs">blogs</a>
+              <li class="header__items">
+                <a href="#blogs" class="header__links text-dark">blogs</a>
               </li>
-              <li class="nav-item header__item">
-                <a class="nav-link py-0 px-1" href="#contact">contact</a>
+              <li class="header__items">
+                <a href="#contact" class="header__links text-dark">contact</a>
               </li>
             </ul>
+          </nav>
+          <div id="hamburger"></div>
+          <div class="header__feature d-flex">
+            <div class="header__feature-wrapper">
+              <i class="fas fa-plane-departure"></i>
+            </div>
+            <div class="header__feature-wrapper">
+              <i class="fas fa-user"></i>
+            </div>
+            <div class="header__feature-wrapper">
+              <i class="fas fa-cloud-sun"></i>
+            </div>
           </div>
         </div>
-        <i class="fas fa-plane-departure fs-3"></i>
-      </nav>
+      </div>
     </section>
     <!-- -------------------- banner section -------------------- -->
     <section class="banner" id="banner">
       <div class="container">
         <div class="row">
-          <div class="col-xl-6 col-lg-6 col-md-12 banner__content">
+          <div class="col-lg-6 col-md-12 banner__content">
             <h3 class="text-capitalize banner__sub-title">hey</h3>
             <h1 class="text-uppercase banner__title-name mb-0">i am <span>jeffern</span></h1>
             <h3 class="text-uppercase banner__job-title">junior frontend web developer</h3>
             <div class="banner__btn">
-              <button type="submit" class="banner__button">hire</button>
+              <button type="submit" class="banner__button">hire me</button>
               <button type="submit" class="banner__button">get cv</button>
             </div>
           </div>
-          <div class="col-xl-6 col-lg-6 col-md-12 banner__content">
+          <div class="col-lg-6 col-md-12 banner__content">
             <img src="img/banner/banner-image.png" alt="Image" class="img-fluid">
           </div>
         </div>
@@ -82,13 +91,22 @@
     </section>
     <!-- -------------------- service section -------------------- -->
     <section class="service" id="service">
-      <div class="container-fluid">
+      <div class="container">
         <div class="row">
           <div class="col-lg-6 col-md-12">
-            <img src="img/portfolio/portfolio-details.jpg" alt="">
+            <img src="img/about-us.png" class="img-fluid" alt="Image">
           </div>
-          <div class="col-lg-6 col-md-12">
-
+          <div class="col-lg-6 col-md-12 service__content ps-5">
+            <h2 class="text-uppercase">
+              <span>let me</span>
+              <span>introduce</span>
+              <span>myself</span>
+            </h2>
+            <div class="service__paragraph py-3 w-75">
+              <p class="service__para">Lorem ipsum dolor sit, amet consectetur adipisicing elit. Magni, corporis adipisci. Distinctio blanditiis aperiam dolore doloremque, adipisci qui. Quas, beatae!</p>
+              <p class="service__para">It is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout. The point of using Lorem Ipsum is that it has a more-or-less normal distribution of letters, as opposed to using 'Content here, content here', making it look like readable English</p>
+            </div>
+            <button type="submit" class="banner__button">download cv</button>
           </div>
         </div>
       </div>

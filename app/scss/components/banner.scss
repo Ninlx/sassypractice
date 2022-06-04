@@ -1,8 +1,9 @@
 @use "../util" as *;
 
 .banner {
+  margin-top: em(70);
   &__content {
-    padding-top: em(95);
+    padding-top: em(120);
   }
   &__content:last-of-type {
     padding-top: em(30);

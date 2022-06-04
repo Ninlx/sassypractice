@@ -14,6 +14,16 @@ $(function () {
   $("body").css("background", "#e2e2e2");
 });
 
-$(document).on("click", ".header__item", function () {
+$(document).on("click", ".header__items", function () {
   $(this).addClass("function").siblings().removeClass("function");
 });
+
+// window.onscroll = () => {
+//   const header = document.querySelector(".header");
+//   header.classList.toggle("sticky", window.scrollY > 0);
+//   if (window.scrollY > 100) {
+//     document.getElementById("scroller").classList.add("scroll");
+//   } else {
+//     document.getElementById("scroller").classList.remove("scroll");
+//   }
+// };

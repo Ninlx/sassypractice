@@ -1,2 +1,2 @@
-"use strict";$((function(){$("body").css("background","#e2e2e2")})),$(document).on("click",".header__item",(function(){$(this).addClass("function").siblings().removeClass("function")}));
+"use strict";$((function(){$("body").css("background","#e2e2e2")})),$(document).on("click",".header__items",(function(){$(this).addClass("function").siblings().removeClass("function")}));
 //# sourceMappingURL=app.js.map
