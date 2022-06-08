@@ -1,7 +1,12 @@
 @use "../util" as *;
 
 .header {
-  &__brand {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  background: linear-gradient(225deg, #ffd89b 10%, #19547b 100%);
+  &__brand a {
     font-family: var(--font-kufication);
   }
   &__items {
@@ -12,6 +17,7 @@
     margin-right: em(0);
   }
   &__links {
+    color: var(--light);
     padding: 0 em(2);
     letter-spacing: em(1);
     text-decoration: none;
@@ -61,5 +67,6 @@
   }
   &__feature-wrapper svg {
     font-size: em(18);
+    cursor: pointer;
   }
 }
