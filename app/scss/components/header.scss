@@ -33,7 +33,7 @@
     background: var(--dark);
     transition: clip-path 600ms;
     transition-timing-function: cubic-bezier(0.6, -0.28, 0.735, 0.045);
-    clip-path: circle(0 at 100% 0);
+    clip-path: circle(0% at 90% 10%);
 
     ul {
       li {
@@ -59,7 +59,7 @@
   }
 
   &__navbar.function {
-    clip-path: circle(150% at 70% 0);
+    clip-path: circle(140% at 80% 10%);
   }
 
   &__feature {
@@ -100,44 +100,28 @@
   }
 
   &__hamburger {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    width: em(70);
-    height: em(70);
-    border-radius: em(50);
-    background: var(--light);
-    z-index: 1010;
-  }
-
-  &__hamburger:hover svg {
-    transform: scale(1.2);
+    z-index: 1000;
   }
 
   &__menu {
+    background-color: transparent;
+    border: none;
+    cursor: pointer;
     display: flex;
     padding: 0;
-    border: none;
     outline: none;
-    background-color: transparent;
-    cursor: pointer;
-
-    svg {
-      transition: transform 400ms;
-      transition-timing-function: cubic-bezier(0.47, 1.64, 0.41, 0.8);
-    }
   }
 
   &__line {
     fill: none;
-    stroke: var(--primary);
+    stroke: #fff;
     stroke-width: 3;
-    transition: stroke-dasharray 600ms cubic-bezier(0.6, -0.28, 0.735, 0.045),
-      stroke-dashoffset 600ms cubic-bezier(0.6, -0.28, 0.735, 0.045);
+    transition: stroke-dasharray 600ms cubic-bezier(0.4, 0, 0.2, 1),
+      stroke-dashoffset 600ms cubic-bezier(0.4, 0, 0.2, 1);
   }
 
   &__line1 {
-    stroke-dasharray: 60 210;
+    stroke-dasharray: 60 207;
     stroke-width: 3;
   }
 
@@ -147,14 +131,14 @@
   }
 
   &__line3 {
-    stroke-dasharray: 60 210;
+    stroke-dasharray: 60 207;
     stroke-width: 3;
   }
 
   .opened & {
     &__line1 {
-      stroke-dasharray: 90 210;
-      stroke-dashoffset: -135;
+      stroke-dasharray: 90 207;
+      stroke-dashoffset: -134;
       stroke-width: 3;
     }
   }
@@ -169,9 +153,57 @@
 
   .opened & {
     &__line3 {
-      stroke-dasharray: 90 210;
-      stroke-dashoffset: -135;
+      stroke-dasharray: 90 207;
+      stroke-dashoffset: -134;
       stroke-width: 3;
     }
   }
+}
+
+/* CUSTOM CURSOR */
+
+.cursor {
+  position: fixed;
+  top: -40px;
+  left: -40px;
+  pointer-events: none;
+  z-index: 9999;
+  mix-blend-mode: difference;
+}
+
+.cursor:before {
+  content: "";
+  width: 80px;
+  height: 80px;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+  border-radius: 50%;
+  background: white;
+  border: 1px solid white;
+  transition: all ease 0.15s;
+  transform: scale(0.15);
+}
+
+.cursor.light:before {
+  transform: scale(1);
+  background: transparent;
+}
+
+.cursor.drag {
+  mix-blend-mode: unset;
+}
+
+.cursor.drag:before {
+  transform: scale(1);
+  background: #45cac8;
+  border-color: transparent;
+}
+
+.cursor.drag:before {
+  content: "\ea23";
+  font-family: "LineIcons";
+  font-size: 20px;
+  color: #fff;
 }
