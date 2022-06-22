@@ -1,13 +1,7 @@
 @use "../util" as *;
 
-::-webkit-scrollbar {
-  display: none;
-}
-
-::-webkit-scrollbar-thumb {
-  display: none;
-}
-
+::-webkit-scrollbar,
+::-webkit-scrollbar-thumb,
 ::-webkit-scrollbar-track {
   display: none;
 }
@@ -21,13 +15,8 @@
 }
 
 * {
-  outline: none;
   border: none;
-}
-
-*::before,
-*::after {
-  text-decoration: none;
+  outline: none;
 }
 
 html {
@@ -35,8 +24,19 @@ html {
   box-sizing: border-box;
 }
 
+*,
+*::before,
+*::after {
+  box-sizing: inherit;
+}
+
 body {
   margin: 0;
   padding: 0;
-  box-sizing: inherit;
+  line-height: 1.2;
+}
+
+a,
+a:active a:visited {
+  text-decoration: none;
 }

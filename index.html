@@ -4,11 +4,25 @@
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Sassy Web App</title>
+    <title>Personal Portfolio | JDM Frontend Web Developer</title>
     <!-- seo -->
-    <meta name="author" content="Jeffern Malinao">
-    <meta name="keywords" content="Sassy Web App | Personal Portfolio">
-    <meta name="description" content="My first web application using sass preprocessor, bootrap css frameworks, and fontawesome 6 with node modules">
+    <meta name="author" content="JDM Frontend Web Developer">
+    <meta name="keywords" content="Personal Portfolio | JDM Frontend Web Developer">
+    <meta name="description" content="freelancing, freelancer, freelancer portfolio, freelancing portfolio, personal portfolio, business portfolio, personal portfolio for development, web development portfolio, web developer, jdm web designer, jdm website designer, jdm frontend web developer, website developer, web development, frontend developer, wev development programming, web development coding, frontend web design, website frontend web designer, jdm frontend web developer, jdm website developer, jdm web developer, junior web developer, frontend developer">
+    <!-- social media meta -->
+    <meta property="og:description" content="Personal Portfolio | JDM Frontend Web Developer">
+    <meta property="og:image" content="http://www.rakktravelphilippines.pages.dev">
+    <meta property="og:site_name" content="JDM Frontend Web Developer">
+    <meta property="og:title" content="JDM Frontend Web Developer">
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="http://www.rakktravelphilippines.pages.dev">
+    <!-- twitter meta -->
+    <meta name="twitter:card" content="summary">
+    <meta name="twitter:site" content="@JDM Frontend Web Developer">
+    <meta name="twitter:creator" content="@JDM Frontend Web Developer">
+    <meta name="twitter:title" content="JDM Frontend Web Developer">
+    <meta name="twitter:description" content="Personal Portfolio | JDM Frontend Web Developer">
+    <meta name="twitter:image" content="http://www.rakktravelphilippines.pages.dev">
     <!-- favicon -->
     <link rel="shortcut icon" href="ico/apple-touch-icon-sm.png" type="image/x-icon">
     <link rel="shortcut icon" href="ico/apple-touch-icon-57.png" type="image/x-icon">
@@ -26,175 +40,51 @@
     <script defer src="plugins/js/solid.min.js"></script>
     <script defer src="plugins/js/brands.min.js"></script>
     <script defer src="plugins/js/regular.min.js"></script>
+    <script defer src="plugins/js/smooth-scrollbar.min.js"></script>
+    <script defer src="plugins/js/overscroll.min.js"></script>
     <script defer src="plugins/js/jquery.min.js"></script>
     <script defer src="dist/app.js"></script>
   </head>
   <body>
     <div class="cursor cursor__conn"></div>
-    <!-- -------------------- header section -------------------- -->
-    <section class="header" id="header">
-      <div class="container px-0">
-        <div class="header__wrapper d-flex align-items-center justify-content-between">
+    <div class="preloader">
+      <div class="loadbar"></div>
+      <figure><span class="text-uppercase" style="letter-spacing: 2px;">portfolio is loading</span><img style="width: 300px; height: 300px;" src="img/preloader.png" alt="Preloader"></figure>
+    </div>
+      <main class="main" id="main" style="position: fixed; top: 0; right: 0; bottom: 0; left: 0;">
+        <header class="header px-5 py-3 d-flex align-items-center justify-content-center" id="header">
           <div class="header__brand">
-            <a href="#" class="text-uppercase fs-1 fw-bold text-decoration-none">portfolio</a>
+            <a href="" class="h1 text-uppercase">portpolio</a>
           </div>
-          <nav class="header__navbar me-5">
-            <ul class="header__nav d-block list-unstyled text-uppercase mb-0 ps-0">
+          <nav class="header__navbar ms-auto d-flex align-items-center justify-content-center">
+            <ul class="header__nav d-flex align-items-center justify-content-center m-0 me-5 p-0 list-unstyled">
               <li class="header__items function">
-                <a href="#" class="header__links text-decoration-none text-primary">home</a>
+                <a href="" class="header__links">home</a>
               </li>
               <li class="header__items">
-                <a href="#service" class="header__links text-decoration-none text-primary">service</a>
+                <a href="" class="header__links">product</a>
               </li>
               <li class="header__items">
-                <a href="#about" class="header__links text-decoration-none text-primary">about</a>
+                <a href="" class="header__links">service</a>
               </li>
               <li class="header__items">
-                <a href="#blogs" class="header__links text-decoration-none text-primary">blogs</a>
+                <a href="" class="header__links">about</a>
               </li>
               <li class="header__items">
-                <a href="#contact" class="header__links text-decoration-none text-primary">contact</a>
+                <a href="" class="header__links">blogs</a>
               </li>
-                <div class="header__feature d-flex">
-                  <div class="header__feature-wrapper">
-                    <i class="fas fa-plane-departure header__fas"></i>
-                  </div>
-                  <div class="header__feature-wrapper">
-                    <i class="fas fa-user-alt"></i>
-                  </div>
-                  <div class="header__feature-wrapper">
-                    <i class="fas fa-cloud-sun"></i>
-                  </div>
-              </div>
+              <li class="header__items">
+                <a href="" class="header__links">contact</a>
+              </li>
             </ul>
+            <button class="custom-btn btn-primary text-uppercase"><a href="">follow me</a></button>
           </nav>
-          <div class="header__hamburger">
-            <button class="header__menu">
-              <svg width="45" height="45" viewBox="0 0 100 100">
-                <path class="header__line header__line1" d="M 20,29.000046 H 80.000231 C 80.000231,29.000046 94.498839,28.817352 94.532987,66.711331 94.543142,77.980673 90.966081,81.670246 85.259173,81.668997 79.552261,81.667751 75.000211,74.999942 75.000211,74.999942 L 25.000021,25.000058" />
-                <path class="header__line header__line2" d="M 20,50 H 80" />
-                <path class="header__line header__line3" d="M 20,70.999954 H 80.000231 C 80.000231,70.999954 94.498839,71.182648 94.532987,33.288669 94.543142,22.019327 90.966081,18.329754 85.259173,18.331003 79.552261,18.332249 75.000211,25.000058 75.000211,25.000058 L 25.000021,74.999942" />
-              </svg>
-            </button>
-          </div>
-        </div>
-      </div>
-    </section>
-    <!-- -------------------- banner section -------------------- -->
-    <section class="banner" id="banner" style="margin-top: 7.5em;">
-      <div class="container">
-        <div class="row">
-          <div class="col-lg-6 col-md-12 banner__content">
-            <h3 class="text-capitalize banner__sub-title">hey</h3>
-            <h1 class="text-uppercase banner__title-name mb-0">i am <span>jeffern</span></h1>
-            <h3 class="text-uppercase banner__job-title">junior frontend web developer</h3>
-            <div class="banner__btn">
-              <button type="submit" class="banner__button">hire me</button>
-              <button type="submit" class="banner__button">follow</button>
-            </div>
-          </div>
-          <div class="col-lg-6 col-md-12 banner__content">
-            <img src="img/banner/banner-image.png" alt="Image" class="img-fluid">
-          </div>
-        </div>
-      </div>
-    </section>
-    <!-- -------------------- service section -------------------- -->
-    <section class="service" id="service">
-      <div class="container">
-        <div class="row">
-          <div class="col-lg-6 col-md-12">
-            <img src="img/about-us.png" class="img-fluid" alt="Image">
-          </div>
-          <div class="col-lg-6 col-md-12 service__content ps-5">
-            <h2 class="text-uppercase">
-              <span>let me</span>
-              <span>introduce</span>
-              <span>myself</span>
-            </h2>
-            <div class="service__paragraph py-3 w-75">
-              <p class="service__para">Lorem ipsum dolor sit, amet consectetur adipisicing elit. Magni, corporis adipisci. Distinctio blanditiis aperiam dolore doloremque, adipisci qui. Quas, beatae!</p>
-              <p class="service__para">It is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout. The point of using Lorem Ipsum is that it has a more-or-less normal distribution of letters, as opposed to using 'Content here, content here', making it look like readable English</p>
-            </div>
-            <button type="submit" class="banner__button">download cv</button>
-          </div>
-        </div>
-      </div>
-    </section>
-    <!-- -------------------- branding section -------------------- -->
-    <section class="branding" id="branding">
-      <div class="container-fluid">
-        <div class="row">
-          <div class="col-xl-6 col-lg-12 col-md-12">
-            <div class="row d-flex align-items-center justify-content-center branding__row">
-              <div class="col-lg-4 col-md-6 col-sm-6 d-flex justify-content-center pb-4 branding__col">
-                <div class="branding__single">
-                  <img src="img/brands/logo1.png" alt="Brand">
-                </div>
-              </div>
-              <div class="col-lg-4 col-md-6 col-sm-6 d-flex justify-content-center pb-4 branding__col">
-                <div class="branding__single">
-                  <img src="img/brands/logo2.png" alt="Brand">
-                </div>
-              </div>
-              <div class="col-lg-4 col-md-6 col-sm-6 d-flex justify-content-center pb-4 branding__col">
-                <div class="branding__single">
-                  <img src="img/brands/logo3.png" alt="Brand">
-                </div>
-              </div>
-              <div class="col-lg-4 col-md-6 col-sm-6 d-flex justify-content-center pb-4 branding__col">
-                <div class="branding__single">
-                  <img src="img/brands/logo4.png" alt="Brand">
-                </div>
-              </div>
-              <div class="col-lg-4 col-md-6 col-sm-6 d-flex justify-content-center pb-4 branding__col">
-                <div class="branding__single">
-                  <img src="img/brands/logo5.png" alt="Brand">
-                </div>
-              </div>
-              <div class="col-lg-4 col-md-6 col-sm-6 d-flex justify-content-center pb-4 branding__col">
-                <div class="branding__single">
-                  <img src="img/brands/logo6.png" alt="Brand">
-                </div>
-              </div>
-              <div class="col-lg-4 col-md-6 col-sm-6 d-flex justify-content-center pb-4 branding__col">
-                <div class="branding__single">
-                  <img src="img/brands/logo7.png" alt="Brand">
-                </div>
-              </div>
-              <div class="col-lg-4 col-md-6 col-sm-6 d-flex justify-content-center pb-4 branding__col">
-                <div class="branding__single">
-                  <img src="img/brands/logo8.png" alt="Brand">
-                </div>
-              </div>
-              <div class="col-lg-4 col-md-6 col-sm-6 d-flex justify-content-center pb-4 branding__col">
-                <div class="branding__single">
-                  <img src="img/brands/logo9.png" alt="Brand">
-                </div>
-              </div>
-            </div>
-          </div>
-          <div class="col-xl-6 col-lg-12 col-md-12">
-            <div class="branding__experienced d-flex flex-column align-items-center justify-content-start">
-              <div class="d-flex flex-row branding__year-area">
-                <h2 class="p-3 branding__years">3</h2>
-                <h2>
-                  <span>years</span>
-                  <span>working</span>
-                  <span>experience</span>
-                </h2>
-              </div>
-              <div class="d-flex flex-row flex-wrap branding__call-area">
-                <span><i class="fas fa-phone-alt fa-3x"></i></span>
-                <div class="branding__call-now">
-                  <a href="#" class="text-uppercase branding__call-link h3 py-2 text-decoration-none">call now</a>
-                  <span>(+63)-931-734-8750</span>
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
-    </section>
+        </header>
+        <section style="width: 100%; height: 100vh; background: #252755;"></section>
+        <section style="width: 100%; height: 100vh; background: #ffa500;"></section>
+        <section style="width: 100%; height: 100vh; background: #008000;"></section>
+        <section style="width: 100%; height: 100vh; background: #ff00ff;"></section>
+        <section style="width: 100%; height: 100vh; background: #ff0000;"></section>
+      </main>
   </body>
 </html>
