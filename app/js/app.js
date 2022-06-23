@@ -4,11 +4,18 @@
   });
 
   Scrollbar.use(OverscrollPlugin);
-  Scrollbar.init(document.querySelector("#main"), custom);
+  var scrlbr = Scrollbar.init(document.querySelector("#main"), custom);
 
   const custom = {
-    damping: 0.07,
+    damping: 0.05,
   };
+
+  var hdrfx = document.querySelector(".header");
+  scrlbr.addListener(function (status) {
+    var offset = status.offset;
+    hdrfx.style.top = offset.y + "px";
+    hdrfx.style.left = offset.x + "px";
+  });
 
   /* --------------------------- cursor magnet --------------------------- */
   var cerchio = document.querySelectorAll(
