@@ -120,8 +120,11 @@
     $(".carousel-image-box").hover(function () {
       $(".cursor").toggleClass("drag");
     });
-    $(".header__brand, .header__items, button").hover(function () {
+    $(".header__brand, .header__items").hover(function () {
       $(".cursor").toggleClass("light");
+    });
+    $("button").hover(function () {
+      $(".cursor").toggleClass("button");
     });
   }
 
@@ -129,7 +132,7 @@
   var width = 100,
     perfData = window.performance.timing, // The PerformanceTiming interface represents timing-related performance information for the given page.
     EstimatedTime = -(perfData.loadEventEnd - perfData.navigationStart),
-    time = parseInt((EstimatedTime / 1000) % 75) * 75;
+    time = parseInt((EstimatedTime / 1000) % 60) * 60;
   $(".loadbar").animate(
     {
       width: width + "%",
