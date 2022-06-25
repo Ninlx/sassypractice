@@ -8,6 +8,7 @@
     top: 0;
     left: 0;
     right: 0;
+    z-index: 1000;
     background: var(--light);
 
     &__brand {
@@ -28,11 +29,34 @@
           }
 
           a {
+            position: relative;
             font-family: var(--font-titillium-regular);
             font-size: em(16);
             letter-spacing: em(1);
             text-transform: uppercase;
             color: var(--dark);
+            transition: 200ms;
+            transition-timing-function: cubic-bezier(0.6, -0.28, 0.735, 0.045);
+
+            &::after {
+              content: "";
+              position: absolute;
+              top: 50%;
+              transform: translateY(-50%);
+              left: 0;
+              transform: scaleX(0);
+              transform-origin: right;
+              width: 100%;
+              height: em(0.1);
+              background: #000;
+              transition: transform 400ms;
+              transition-timing-function: cubic-bezier(0.6, -0.28, 0.735, 0.045);
+            }
+
+            &:hover::after {
+              transform-origin: left;
+              transform: scaleX(1);
+            }
           }
         }
       }
@@ -47,13 +71,14 @@
     justify-content: center;
     color: var(--dark);
     background: var(--light);
+    z-index: 999;
 
     &__container {
-      margin-top: em(55);
+      margin-top: em(110);
     }
 
     &__text {
-      margin-top: em(155);
+      margin-top: em(140);
 
       & h3:not(:last-of-type) {
         font-size: em(20);
@@ -73,8 +98,9 @@
 
       h1 {
         font-family: var(--font-galaxus);
-        font-size: em(90);
+        font-size: em(120);
         text-transform: uppercase;
+        margin-top: em(-3.75);
 
         span {
           background: -webkit-linear-gradient(
@@ -104,7 +130,7 @@
     display: flex;
     align-items: center;
     justify-content: center;
-    background: #252755;
+    background: var(--light);
 
     &__button {
       margin-top: em(75);
