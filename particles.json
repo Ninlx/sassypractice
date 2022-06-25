@@ -1,0 +1,57 @@
+{
+  "particles": {
+    "number": {
+      "value": 100,
+      "density": {
+        "enable": true,
+        "value_are": 800
+      }
+    },
+    "color": {
+      "value": "random"
+    },
+    "shape": {
+      "type": ["circle", "star", "edge"]
+    },
+    "opacity": {
+      "value": 0.55,
+      "anim": {
+        "enable": true,
+        "speed": 2,
+        "opacity_min": 0.25,
+        "sync": true
+      }
+    },
+    "size": {
+      "value": 5,
+      "random": true,
+      "anim": {
+        "enable": true,
+        "speed": 10,
+        "size_min": 7,
+        "sync": true
+      }
+    },
+    "line_linked": {
+      "enable": true,
+      "distance": 200,
+      "color": "#000000",
+      "opacity": 1,
+      "width": 0.25
+    },
+    "move": {
+      "enable": true,
+      "speed": 5,
+      "direction": "none",
+      "random": true,
+      "straight": true,
+      "out-mode": "bounce",
+      "bounce": true,
+      "attract": {
+        "enable": true,
+        "rotateX": 900,
+        "rotateY": 1200
+      }
+    }
+  }
+}

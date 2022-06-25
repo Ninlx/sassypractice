@@ -149,16 +149,36 @@
   }
 }
 
-.custom-btn {
-  display: inline-block;
-  padding: em(10) em(20);
-  background: var(--dark);
+button {
+  display: block;
+  width: em(90);
+  height: em(30);
+  border: em(1) solid var(--primary);
+  font-family: var(--font-galaxus);
+  font-size: em(22);
+  font-weight: em(500);
+  letter-spacing: em(1);
+  color: var(--primary);
+}
 
-  a {
-    font-family: var(--font-galaxus);
-    font-size: em(22);
-    line-height: 0.5;
-    letter-spacing: em(1);
-    color: var(--light);
+.button__link {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: em(140);
+  height: em(55);
+  border: em(1) solid transparent;
+  background: var(--primary);
+  font-family: var(--font-titillium-bold);
+  font-size: em(16);
+  letter-spacing: em(1);
+  color: white;
+  transition: color, border-color, background 200ms;
+  transition-timing-function: cubic-bezier(0.47, 0, 0.745, 0.715);
+
+  &:hover {
+    color: var(--danger);
+    border-color: var(--danger);
+    background: transparent;
   }
 }

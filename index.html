@@ -35,15 +35,16 @@
     <link rel="stylesheet" href="plugins/css/fontawesome.min.css">
     <link rel="stylesheet" href="dist/app.css">
     <!-- js file link -->
+    <script defer src="plugins/js/particles.js"></script>
     <script defer src="plugins/js/bootstrap.min.js"></script>
     <script defer src="plugins/js/fontawesome.min.js"></script>
     <script defer src="plugins/js/tweenmax.min.js"></script>
     <script defer src="plugins/js/solid.min.js"></script>
     <script defer src="plugins/js/brands.min.js"></script>
     <script defer src="plugins/js/regular.min.js"></script>
+    <script defer src="plugins/js/jquery.min.js"></script>
     <script defer src="plugins/js/smooth-scrollbar.min.js"></script>
     <script defer src="plugins/js/overscroll.min.js"></script>
-    <script defer src="plugins/js/jquery.min.js"></script>
     <script defer src="dist/app.js"></script>
   </head>
   <body>
@@ -52,8 +53,9 @@
       <div class="loadbar"></div>
       <figure><span class="text-uppercase">portfolio is loading</span><img style="width: 300px; height: 300px;" src="img/preloader.png" alt="Preloader"></figure>
     </div>
-      <main class="main" id="main" style="position: fixed; top: 0; right: 0; bottom: 0; left: 0;">
-        <header class="header px-5 py-3 d-flex align-items-center justify-content-center" id="header">
+    <main class="main" id="main" style="position: fixed; top: 0; right: 0; bottom: 0; left: 0;">
+      <div class="particles-js" id="particles-js" style="width: 100%; height: 100vh; position: absolute;"></div>
+      <header class="header px-5 py-3 d-flex align-items-center justify-content-center" id="header">
           <div class="header__brand">
             <a href="" class="h1 text-uppercase">portpolio</a>
           </div>
@@ -78,25 +80,32 @@
                 <a href="#contact" class="header__links">contact</a>
               </li>
             </ul>
-            <button class="custom-btn btn-primary text-uppercase"><a href="">follow me</a></button>
+            <a href="" class="button__link text-uppercase">follow me</a>
           </nav>
         </header>
-        <section class="banner" id="banner">
+        <section class="banner">
           <div class="container banner__container">
             <div class="row">
               <div class="col-md-6 col-lg-6">
                 <div class="banner__content banner__text">
                   <h3 class="banner__sub">hey</h3>
-                  <h1 class="banner__title">i am <span>jeffer</span></h1>
+                  <h1 class="banner__title">i am <span>jeffern</span></h1>
                   <h3 class="des">frontend web developer</h3>
                 </div>
-                <button class="banner__btn custom-btn">hire me</button>
+                <button class="custom__button text-uppercase">hire me</button>
               </div>
               <div class="col-md-6 col-lg-6">
                 <div class="banner__content banner__img">
                   <figure><img class="img-fluid" src="img/banner/banner-image.png" alt=""></figure>
                 </div>
               </div>
+            </div>
+          </div>
+        </section>
+        <section class="child" id="child">
+          <div class="button child__button" id="button">
+            <div class="button__box">
+              <button class="custom__button text-uppercase" type="submit">Hello</button>
             </div>
           </div>
         </section>

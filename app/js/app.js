@@ -19,7 +19,7 @@
 
   /* --------------------------- cursor magnet --------------------------- */
   var cerchio = document.querySelectorAll(
-    ".header__brand, .header__items, button"
+    ".header__brand, .header__items, .button__link, .custom__button"
   );
   cerchio.forEach(function (elem) {
     $(document).on("mousemove touch", function (e) {
@@ -30,7 +30,7 @@
     var mX = e.pageX,
       mY = e.pageY;
     const item = $(el);
-    const customDist = item.data("dist") * 20 || 80;
+    const customDist = item.data("dist") * 70 || 120;
     const centerX = item.offset().left + item.width() / 2;
     const centerY = item.offset().top + item.height() / 2;
     var deltaX = Math.floor(centerX - mX) * -0.35;
@@ -44,7 +44,7 @@
       });
       item.addClass("magnet");
     } else {
-      TweenMax.to(item, 0.6, {
+      TweenMax.to(item, 0.7, {
         y: 0,
         x: 0,
         scale: 1,
@@ -123,7 +123,7 @@
     $(".header__brand, .header__items").hover(function () {
       $(".cursor").toggleClass("light");
     });
-    $("button").hover(function () {
+    $(".button__link, .custom__button").hover(function () {
       $(".cursor").toggleClass("button");
     });
   }
@@ -157,3 +157,7 @@
     $("body").addClass("page-loaded");
   }, time);
 })(jQuery);
+
+particlesJS.load("particles-js", "particles.json", function () {
+  console.log("particles javascript library running....");
+});
