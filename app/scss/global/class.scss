@@ -25,9 +25,13 @@
 }
 
 .cursor.light {
+  mix-blend-mode: unset;
+
   &::before {
-    transform: scale(1);
-    background: transparent;
+    border: none;
+    transform: scale(0.777);
+    filter: opacity(0.5);
+    background: linear-gradient(120deg, var(--danger), var(--orange));
   }
 }
 
@@ -158,7 +162,16 @@ button {
   font-size: em(22);
   font-weight: em(500);
   letter-spacing: em(1);
+  padding-top: em(3.6);
   color: var(--primary);
+  transition: border-color, background, color 200ms;
+  transition-timing-function: cubic-bezier(0.47, 0, 0.745, 0.715);
+
+  &:hover {
+    border-color: transparent;
+    background: var(--danger);
+    color: var(--light);
+  }
 }
 
 .button__link {

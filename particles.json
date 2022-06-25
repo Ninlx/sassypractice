@@ -8,7 +8,7 @@
       }
     },
     "color": {
-      "value": "random"
+      "value": "#000000"
     },
     "shape": {
       "type": ["circle", "star", "edge"]
@@ -37,11 +37,11 @@
       "distance": 100,
       "color": "#000000",
       "opacity": 1.75,
-      "width": 0.35
+      "width": 0.55
     },
     "move": {
       "enable": true,
-      "speed": 1.75,
+      "speed": 2.75,
       "direction": "none",
       "random": true,
       "straight": false,
