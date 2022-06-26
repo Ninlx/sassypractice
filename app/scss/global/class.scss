@@ -25,13 +25,13 @@
   }
 }
 
-.cursor.light {
+.cursor.button {
   mix-blend-mode: unset;
 
   &::before {
     border: none;
-    transform: scale(0.777);
-    filter: opacity(0.5);
+    transform: scale(0.95);
+    filter: opacity(0.55);
     background: linear-gradient(120deg, var(--danger), var(--orange));
   }
 }
@@ -50,18 +50,27 @@
   }
 }
 
-.cursor.button {
+.cursor.navlinks {
   mix-blend-mode: unset;
 
   &::before {
     content: "";
-    font-family: "LineIcons";
-    font-size: em(30);
-    color: var(--primary);
-    transform: scale(0.7);
-    filter: opacity(0.7);
+    transform: scale(0.75);
+    filter: opacity(0.25);
+    border: none;
     background: linear-gradient(120deg, var(--primary), var(--danger));
-    border-color: transparent;
+  }
+}
+
+.cursor.brand {
+  mix-blend-mode: unset;
+
+  &::before {
+    content: "";
+    transform: scale(0.95);
+    filter: opacity(0.55);
+    border: none;
+    background: linear-gradient(120deg, var(--light), var(--primary));
   }
 }
 

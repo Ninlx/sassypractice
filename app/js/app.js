@@ -7,7 +7,7 @@
   var scrlbr = Scrollbar.init(document.querySelector("#main"), custom);
 
   const custom = {
-    damping: 0.75,
+    damping: 0.95,
   };
 
   var hdrfx = document.querySelector(".header");
@@ -121,10 +121,13 @@
       $(".cursor").toggleClass("drag");
     });
     $(".header__brand, .header__items").hover(function () {
-      $(".cursor").toggleClass("button");
+      $(".cursor").toggleClass("navlinks");
     });
     $(".button__link, .custom__button").hover(function () {
-      $(".cursor").toggleClass("light");
+      $(".cursor").toggleClass("button");
+    });
+    $(".header__brand").hover(function () {
+      $(".cursor").toggleClass("brand");
     });
   }
 
