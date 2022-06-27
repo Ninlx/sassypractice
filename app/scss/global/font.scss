@@ -1,122 +1,76 @@
 @font-face {
-  font-family: "Signature";
-  src: url("/font/signature/signature.ttf");
-  src: url("/font/signature/signature.ttf") format("embedded-opentype"),
-    url("/font/signature/signature.ttf") format("woff"),
-    url("/font/signature/signature.ttf") format("truetype"),
-    url("/font/signature/signature.ttf") format("svg");
+  font-family: "Neonblitz";
+  src: url("/font/neonblitz/neonblitz.otf");
+  src: url("/font/neonblitz/neonblitz.otf") format("embedded-opentype"),
+    url("/font/neonblitz/neonblitz.otf") format("woff"),
+    url("/font/neonblitz/neonblitz.otf") format("truetype"),
+    url("/font/neonblitz/neonblitz.otf") format("svg");
   font-style: normal;
   font-weight: normal;
 }
 
 @font-face {
-  font-family: "Titillium Regular";
-  src: url("/font/titillium/titillium\ regular.ttf");
-  src: url("/font/titillium/titillium\ regular.ttf") format("embedded-opentype"),
-    url("/font/titillium/titillium\ regular.ttf") format("woff"),
-    url("/font/titillium/titillium\ regular.ttf") format("truetype"),
-    url("/font/titillium/titillium\ regular.ttf") format("svg");
+  font-family: "Racespace Reglr";
+  src: url("/font/racespace/racespace__regular.otf");
+  src: url("/font/racespace/racespace__regular.otf") format("embedded-opentype"),
+    url("/font/racespace/racespace__regular.otf") format("woff"),
+    url("/font/racespace/racespace__regular.otf") format("truetype"),
+    url("/font/racespace/racespace__regular.otf") format("svg");
   font-style: normal;
   font-weight: normal;
 }
 
 @font-face {
-  font-family: "Titillium Light";
-  src: url("/font/titillium/titillium\ light.ttf");
-  src: url("/font/titillium/titillium\ light.ttf") format("embedded-opentype"),
-    url("/font/titillium/titillium\ light.ttf") format("woff"),
-    url("/font/titillium/titillium\ light.ttf") format("truetype"),
-    url("/font/titillium/titillium\ light.ttf") format("svg");
+  font-family: "Racespace Strp";
+  src: url("/font/racespace/racespace__stripe.otf");
+  src: url("/font/racespace/racespace__stripe.otf") format("embedded-opentype"),
+    url("/font/racespace/racespace__stripe.otf") format("woff"),
+    url("/font/racespace/racespace__stripe.otf") format("truetype"),
+    url("/font/racespace/racespace__stripe.otf") format("svg");
   font-style: normal;
   font-weight: normal;
 }
 
 @font-face {
-  font-family: "Titillium Light Italic";
-  src: url("/font/titillium/titillium\ light\ italic.ttf");
-  src: url("/font/titillium/titillium\ light\ italic.ttf")
-      format("embedded-opentype"),
-    url("/font/titillium/titillium\ light\ italic.ttf") format("woff"),
-    url("/font/titillium/titillium\ light\ italic.ttf") format("truetype"),
-    url("/font/titillium/titillium\ light\ italic.ttf") format("svg");
+  font-family: "Terabite";
+  src: url("/font/terabite/terabite.ttf");
+  src: url("/font/terabite/terabite.ttf") format("embedded-opentype"),
+    url("/font/terabite/terabite.ttf") format("woff"),
+    url("/font/terabite/terabite.ttf") format("truetype"),
+    url("/font/terabite/terabite.ttf") format("svg");
   font-style: normal;
   font-weight: normal;
 }
 
 @font-face {
-  font-family: "Titillium Bold";
-  src: url("/font/titillium/titillium\ bold.ttf");
-  src: url("/font/titillium/titillium\ bold.ttf") format("embedded-opentype"),
-    url("/font/titillium/titillium\ bold.ttf") format("woff"),
-    url("/font/titillium/titillium\ bold.ttf") format("truetype"),
-    url("/font/titillium/titillium\ bold.ttf") format("svg");
+  font-family: "Titillium";
+  src: url("/font/titillium/titillium.ttf");
+  src: url("/font/titillium/titillium.ttf") format("embedded-opentype"),
+    url("/font/titillium/titillium.ttf") format("woff"),
+    url("/font/titillium/titillium.ttf") format("truetype"),
+    url("/font/titillium/titillium.ttf") format("svg");
   font-style: normal;
   font-weight: normal;
 }
 
 @font-face {
-  font-family: "Titillium Semi Bold";
-  src: url("/font/titillium/titillium\ semi\ bold.ttf");
-  src: url("/font/titillium/titillium\ semi\ bold.ttf")
-      format("embedded-opentype"),
-    url("/font/titillium/titillium\ semi\ bold.ttf") format("woff"),
-    url("/font/titillium/titillium\ semi\ bold.ttf") format("truetype"),
-    url("/font/titillium/titillium\ semi\ bold.ttf") format("svg");
+  font-family: "Titillium Lit";
+  src: url("/font/titillium/titillium__light.ttf");
+  src: url("/font/titillium/titillium__light.ttf") format("embedded-opentype"),
+    url("/font/titillium/titillium__light.ttf") format("woff"),
+    url("/font/titillium/titillium__light.ttf") format("truetype"),
+    url("/font/titillium/titillium__light.ttf") format("svg");
   font-style: normal;
   font-weight: normal;
 }
 
 @font-face {
-  font-family: "Galaxus";
-  src: url("/font/galaxus/galaxus.otf");
-  src: url("/font/galaxus/galaxus.otf") format("embedded-opentype"),
-    url("/font/galaxus/galaxus.otf") format("woff"),
-    url("/font/galaxus/galaxus.otf") format("truetype"),
-    url("/font/galaxus/galaxus.otf") format("svg");
-  font-style: normal;
-  font-weight: normal;
-}
-
-@font-face {
-  font-family: "Spotyfied";
-  src: url("/font/spotyfied/spotyfied.ttf");
-  src: url("/font/spotyfied/spotyfied.ttf") format("embedded-opentype"),
-    url("/font/spotyfied/spotyfied.ttf") format("woff"),
-    url("/font/spotyfied/spotyfied.ttf") format("truetype"),
-    url("/font/spotyfied/spotyfied.ttf") format("svg");
-  font-style: normal;
-  font-weight: normal;
-}
-
-@font-face {
-  font-family: "Mangaka";
-  src: url("/font/mangaka/mangaka.otf");
-  src: url("/font/mangaka/mangaka.otf") format("embedded-opentype"),
-    url("/font/mangaka/mangaka.otf") format("woff"),
-    url("/font/mangaka/mangaka.otf") format("truetype"),
-    url("/font/mangaka/mangaka.otf") format("svg");
-  font-style: normal;
-  font-weight: normal;
-}
-
-@font-face {
-  font-family: "Kufication";
-  src: url("/font/kufication/kufication.ttf");
-  src: url("/font/kufication/kufication.ttf") format("embedded-opentype"),
-    url("/font/kufication/kufication.ttf") format("woff"),
-    url("/font/kufication/kufication.ttf") format("truetype"),
-    url("/font/kufication/kufication.ttf") format("svg");
-  font-style: normal;
-  font-weight: normal;
-}
-
-@font-face {
-  font-family: "Memesique";
-  src: url("/font/memesique/memesique.ttf");
-  src: url("/font/memesique/memesique.ttf") format("embedded-opentype"),
-    url("/font/memesique/memesique.ttf") format("woff"),
-    url("/font/memesique/memesique.ttf") format("truetype"),
-    url("/font/memesique/memesique.ttf") format("svg");
+  font-family: "Titillium Bld";
+  src: url("/font/titillium/titillium__bold.ttf");
+  src: url("/font/titillium/titillium__bold.ttf") format("embedded-opentype"),
+    url("/font/titillium/titillium__bold.ttf") format("woff"),
+    url("/font/titillium/titillium__bold.ttf") format("truetype"),
+    url("/font/titillium/titillium__bold.ttf") format("svg");
   font-style: normal;
   font-weight: normal;
 }

@@ -12,12 +12,14 @@
     background: var(--light);
 
     &__brand {
-      font-family: var(--font-kufication);
+      font-family: var(--font-racespace-strp);
 
       a {
-        background: -webkit-linear-gradient(45deg, var(--danger), var(--dark));
+        background-image: -webkit-linear-gradient(45deg, var(--danger), var(--dark));
         background-clip: text;
-        -webkit-text-fill-color: transparent;
+        transition: transform 200ms;
+        transition-timing-function: cubic-bezier(0.47, 0, 0.745, 0.715);
+        letter-spacing: em(0.75);
       }
     }
 
@@ -50,7 +52,12 @@
               height: em(0.105);
               background: #000;
               transition: transform 400ms;
-              transition-timing-function: cubic-bezier(0.6, -0.28, 0.735, 0.045);
+              transition-timing-function: cubic-bezier(
+                0.6,
+                -0.28,
+                0.735,
+                0.045
+              );
             }
 
             &:hover::after {
