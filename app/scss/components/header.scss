@@ -12,7 +12,8 @@
     background: var(--light);
 
     &__brand {
-      font-family: var(--font-racespace-strp);
+      font-family: var(--font-terabite);
+      font-weight: bolder;
 
       a {
         background-image: -webkit-linear-gradient(45deg, var(--danger), var(--dark));
@@ -24,6 +25,8 @@
     }
 
     &__navbar {
+      display: none !important;
+
       ul {
         li {
           &:not(:last-child) {
@@ -68,6 +71,10 @@
         }
       }
     }
+
+    &__navbar.show {
+      display: block !important;
+    }
   }
 
   .banner {
@@ -81,16 +88,16 @@
     z-index: 999;
 
     &__container {
-      margin-top: em(110);
+      margin-top: em(90);
     }
 
     &__text {
       margin-top: em(140);
 
       & h3:not(:last-of-type) {
-        font-size: em(20);
-        font-family: var(--font-signature);
-        text-transform: capitalize;
+        font-size: em(26);
+        font-family: var(--font-terabite);
+        margin: 0 0 em(-10);
         color: var(--dark);
 
         &::after {
@@ -104,10 +111,9 @@
       }
 
       h1 {
-        font-family: var(--font-galaxus);
+        font-family: var(--font-terabite);
         font-size: em(120);
         text-transform: uppercase;
-        margin-top: em(-3.75);
 
         span {
           background: -webkit-linear-gradient(
@@ -122,9 +128,10 @@
       }
 
       h3 {
-        font-family: var(--font-titillium-bold);
-        font-size: em(22);
+        font-family: var(--font-terabite);
+        font-size: em(26);
         font-weight: 600;
+        letter-spacing: em(0.75);
         margin: em(-20) em(0) em(26) em(0);
         text-transform: uppercase;
       }

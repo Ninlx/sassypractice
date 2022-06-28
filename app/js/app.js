@@ -1,6 +1,10 @@
 (function ($) {
   $(function () {
     "use strict";
+    $(".hamburger-menu").on("click", function (e) {
+      $(this).toggleClass("opened");
+      $(".header__navbar").toggleClass("show");
+    });
   });
 
   Scrollbar.use(OverscrollPlugin);
@@ -19,7 +23,7 @@
 
   /* --------------------------- cursor magnet --------------------------- */
   var cerchio = document.querySelectorAll(
-    ".header__brand, .header__items, .button__link, .custom__button"
+    ".header__brand, .header__items, .link__button, .custom__button, .hamburger-menu"
   );
   cerchio.forEach(function (elem) {
     $(document).on("mousemove touch", function (e) {
@@ -123,11 +127,14 @@
     $(".header__brand, .header__items").hover(function () {
       $(".cursor").toggleClass("navlinks");
     });
-    $(".button__link, .custom__button").hover(function () {
+    $(".link__button, .custom__button").hover(function () {
       $(".cursor").toggleClass("button");
     });
     $(".header__brand").hover(function () {
       $(".cursor").toggleClass("brand");
+    });
+    $(".hamburger-menu").hover(function () {
+      $(".cursor").toggleClass("hamburger");
     });
   }
 
