@@ -168,6 +168,4 @@
   }, time);
 })(jQuery);
 
-particlesJS.load("particles-js", "particles.json", function () {
-  console.log("particles javascript library running....");
-});
+particlesJS.load("particles-js", "particles.json", function () {});

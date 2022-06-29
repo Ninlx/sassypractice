@@ -1,6 +1,6 @@
 ### avoid adding unused stuff to our git repo from the node package manager
 
-## ignore everything inside node modules
+## ignore everything inside the node modules folder from deploying the master branch
 node_modules/
 
 ## ignore
