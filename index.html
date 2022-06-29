@@ -39,7 +39,7 @@
     <link rel="stylesheet" href="plugins/css/fontawesome.min.css">
     <link rel="stylesheet" href="dist/app.css">
     <!-- js file link -->
-    <script defer src="plugins/js/particles.js"></script>
+    <!-- <script defer src="plugins/js/particles.js"></script> -->
     <script defer src="plugins/js/bootstrap.min.js"></script>
     <script defer src="plugins/js/fontawesome.min.js"></script>
     <script defer src="plugins/js/tweenmax.min.js"></script>
@@ -58,7 +58,7 @@
       <figure><span class="text-uppercase">portfolio is loading</span><img style="width: 300px; height: 300px;" src="img/preloader.png" alt="Preloader"></figure>
     </div>
     <main class="main" id="main" style="position: fixed; top: 0; right: 0; bottom: 0; left: 0;">
-      <div class="particles-js" id="particles-js" style="width: 100%; height: 100vh; position: absolute;"></div>
+      <!-- <div class="particles-js" id="particles-js" style="width: 100%; height: 100vh; position: absolute;"></div> -->
       <header class="header px-5 py-3 d-flex align-items-center justify-content-center" id="header">
           <div class="header__brand me-auto">
             <a href="" class="h1 text-uppercase">portpolio</a>
@@ -96,20 +96,18 @@
           </div>
         </header>
         <section class="banner">
-          <div class="container banner__container">
+          <div class="container-fluid banner__container">
             <div class="row">
-              <div class="col-md-6 col-lg-6">
+              <div class="col-md-6 col-lg-6" style="margin-left: 100px;">
                 <div class="banner__content banner__text">
                   <h3 class="banner__sub">hey</h3>
-                  <h1 class="banner__title">i am <span>jeff</span></h1>
+                  <h1 class="banner__title">i am <span>j</span><span>e</span><span>f</span><span>f</span></h1>
                   <h3 class="des">frontend web developer</h3>
                 </div>
                 <a target="_blank" href="https://www.facebook.com/jeffern.malinao.90/" class="link__button text-uppercase">follow me</a>                
               </div>
               <div class="col-md-6 col-lg-6">
-                <div class="banner__content banner__img">
-                  <figure><img class="img-fluid" src="img/banner/banner-image.png" alt=""></figure>
-                </div>
+                <div class="banner__canvas" id="canvas"></div>
               </div>
             </div>
           </div>

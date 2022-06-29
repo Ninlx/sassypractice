@@ -1,7 +1,10 @@
 @use "../util" as *;
 
 #main {
-  background: var(--dark);
+  position: relative;
+  background-image: url("https://user-images.githubusercontent.com/26748614/96337246-f14d4580-1085-11eb-8793-a86d929e034d.jpg");
+  background-size: cover;
+  backdrop-filter: brightness(50%);
 
   .header {
     position: fixed;
@@ -9,14 +12,13 @@
     left: 0;
     right: 0;
     z-index: 1000;
-    background: var(--light);
 
     &__brand {
       font-family: var(--font-terabite);
       font-weight: bolder;
 
       a {
-        color: var(--dark);
+        color: cyan;
       }
     }
 
@@ -84,27 +86,27 @@
   }
 
   .banner {
+    position: relative;
     width: 100%;
     height: 100vh;
     display: flex;
     align-items: center;
     justify-content: center;
     color: var(--dark);
-    background: var(--light);
     z-index: 999;
 
     &__container {
-      margin-top: em(90);
+      margin-top: em(40);
     }
 
     &__text {
-      margin-top: em(120);
+      margin-top: em(0);
 
       & h3:not(:last-of-type) {
         font-size: em(26);
         font-family: var(--font-terabite);
         margin: 0 0 em(-10);
-        color: var(--dark);
+        color: cyan;
 
         &::after {
           content: "";
@@ -112,7 +114,7 @@
           height: em(0.555);
           margin-left: em(6);
           display: inline-block;
-          background: var(--dark);
+          background: cyan;
         }
       }
 
@@ -120,16 +122,12 @@
         font-family: var(--font-terabite);
         font-size: em(120);
         text-transform: uppercase;
+        color: cyan;
 
-        span {
-          background: -webkit-linear-gradient(
-            45deg,
-            var(--primary),
-            var(--dark)
-          );
-          background-clip: text;
-          -webkit-text-fill-color: transparent;
-          margin-left: em(1);
+        @for $i from 1 through 4 {
+          span:nth-child(#{$i}) {
+            color: hsl($i * 25, 50%, 50%);
+          }
         }
       }
 
@@ -140,7 +138,18 @@
         letter-spacing: em(0.75);
         margin: em(-20) em(0) em(26) em(0);
         text-transform: uppercase;
+        color: cyan;
       }
+    }
+
+    &__canvas {
+      position: absolute;
+      top: 0;
+      left: calc(100% - 73.95%);
+      width: 100%;
+      height: 100%;
+      // pointer-events: none;
+      overflow: hidden;
     }
   }
 
@@ -150,7 +159,6 @@
     display: flex;
     align-items: center;
     justify-content: center;
-    background: var(--light);
 
     &__button {
       margin-top: em(75);
