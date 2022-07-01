@@ -95,12 +95,11 @@
     color: var(--dark);
     z-index: 999;
 
-    &__container {
-      margin-top: em(40);
-    }
-
     &__text {
-      margin-top: em(0);
+      padding-top: em(225.75);
+      padding-left: em(80.95);
+      width: 100%;
+      height: 100%;
 
       & h3:not(:last-of-type) {
         font-size: em(26);
@@ -143,13 +142,9 @@
     }
 
     &__canvas {
-      position: absolute;
-      top: 0;
-      left: calc(100% - 73.95%);
+      padding-top: em(40.75);
       width: 100%;
-      height: 100%;
-      // pointer-events: none;
-      overflow: hidden;
+      height: 100vh;
     }
   }
 

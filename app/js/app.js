@@ -174,7 +174,7 @@
     nucleus,
     stars,
     controls,
-    container = document.getElementById("canvas"),
+    container = document.getElementById("cnvscntnr"),
     timeout_Debounce,
     noise = new SimplexNoise(),
     cameraSpeed = 0,
@@ -184,11 +184,12 @@
   animate();
 
   function init() {
-    scene = new THREE.Scene();
+    const cnvscntnr = document.getElementById("cnvscntnr");
 
+    scene = new THREE.Scene();
     camera = new THREE.PerspectiveCamera(
       55,
-      window.innerWidth / window.innerHeight,
+      cnvscntnr.offsetWidth / cnvscntnr.offsetHeight,
       0.01,
       1000
     );
@@ -204,19 +205,20 @@
 
     renderer = new THREE.WebGLRenderer({
       antialias: true,
+      canvas: document.querySelector("canvas"),
       alpha: true,
     });
-    renderer.setSize(container.clientWidth, container.clientHeight);
+
+    renderer.setSize(cnvscntnr.offsetWidth, cnvscntnr.offsetHeight);
     renderer.setPixelRatio(window.devicePixelRatio);
-    container.appendChild(renderer.domElement);
 
     //OrbitControl
     controls = new THREE.OrbitControls(camera, renderer.domElement);
     controls.autoRotate = true;
-    controls.autoRotateSpeed = 0.15;
-    controls.minDistance = 425;
-    controls.maxDistance = 425;
-    controls.enablePan = false;
+    controls.autoRotateSpeed = 0.25;
+    controls.minDistance = 410.95;
+    controls.maxDistance = 410.95;
+    controls.enablePan = true;
 
     const loader = new THREE.TextureLoader();
     const textureSphereBg = loader.load(
