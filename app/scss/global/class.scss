@@ -2,23 +2,23 @@
 
 .cursor {
   position: fixed;
-  top: -40px;
-  left: -40px;
+  top: em(-40);
+  left: em(-40);
   pointer-events: none;
   z-index: 9999;
   mix-blend-mode: difference;
 
   &::before {
     content: "";
-    width: 80px;
-    height: 80px;
+    width: em(80);
+    height: em(80);
     display: flex;
     flex-wrap: wrap;
     justify-content: center;
     align-items: center;
     border-radius: 50%;
     background: var(--light);
-    border: 1px solid var(--light);
+    border: em(1) solid var(--light);
     transition: 300ms;
     transition-timing-function: cubic-bezier(0.6, -0.28, 0.735, 0.045);
     transform: scale(0.15);
@@ -45,7 +45,7 @@
     border-color: transparent;
     content: "\ea23";
     font-family: "LineIcons";
-    font-size: 20px;
+    font-size: em(20);
     color: #fff;
   }
 }
@@ -106,7 +106,7 @@
   .loadbar {
     width: 0%;
     height: 100%;
-    max-height: 6px;
+    max-height: em(6);
     background: var(--primary);
     position: absolute;
     top: 0;
@@ -116,8 +116,8 @@
   }
 
   figure {
-    width: 600px;
-    height: 600px;
+    width: em(600);
+    height: em(600);
     display: flex;
     align-items: center;
     justify-content: center;
@@ -140,7 +140,7 @@
     }
 
     img {
-      height: 100px;
+      height: em(100);
       display: inline-block;
       opacity: 0.05;
     }

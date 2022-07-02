@@ -95,8 +95,8 @@
       };
     }
     run() {
-      this.mouseLast.x = lerp(this.mouseLast.x, this.mouseCurrent.x, 0.2);
-      this.mouseLast.y = lerp(this.mouseLast.y, this.mouseCurrent.y, 0.2);
+      this.mouseLast.x = lerp(this.mouseLast.x, this.mouseCurrent.x, 0.95);
+      this.mouseLast.y = lerp(this.mouseLast.y, this.mouseCurrent.y, 0.95);
       this.mouseLast.x = Math.floor(this.mouseLast.x * 100) / 100;
       this.mouseLast.y = Math.floor(this.mouseLast.y * 100) / 100;
       this.cursor.style.transform = `translate3d(${this.mouseLast.x}px, ${this.mouseLast.y}px, 0)`;
@@ -106,7 +106,7 @@
       this.rAF = requestAnimationFrame(this.run);
     }
     addEvents() {
-      window.addEventListener("mousemove", this.getMousePosition, false);
+      window.addEventListener("mousemove", this.getMousePosition, true);
     }
     on() {
       this.addEvents();
