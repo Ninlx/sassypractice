@@ -1,9 +1,10 @@
 @use "../util" as *;
 
-::-webkit-scrollbar,
-::-webkit-scrollbar-thumb,
-::-webkit-scrollbar-track {
-  display: none;
+*::-webkit-scrollbar,
+*::-webkit-scrollbar-thumb,
+*::-webkit-scrollbar-track {
+  display: none !important;
+  opacity: 0 !important;
 }
 
 *::selection {

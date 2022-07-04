@@ -11,10 +11,15 @@
     top: 0;
     left: 0;
     right: 0;
-    background: url(/img/header.PNG);
-    background-size: cover;
-    background-position: center center;
-    background-repeat: no-repeat;
+    padding: em(9.75) 9.25% !important;
+    background: url(/img/header.PNG) !important;
+    background-size: cover !important;
+    background-position: center center !important;
+    background-repeat: no-repeat !important;
+    transition: all 300ms;
+    transition-property: background, background-size, background-position,
+      background-repeat;
+    transition-timing-function: cubic-bezier(0.47, 0, 0.745, 0.715);
     z-index: 100;
 
     &__brand {
@@ -49,7 +54,7 @@
         height: 100vh;
         background: url("https://user-images.githubusercontent.com/26748614/96337246-f14d4580-1085-11eb-8793-a86d929e034d.jpg");
         background-size: cover;
-        filter: opacity(0.85) grayscale(0.75);
+        filter: hue-rotate(45deg) blur(em(2.25)) grayscale(0.35);
         backdrop-filter: 50%;
       }
 
@@ -79,10 +84,15 @@
               transform: scaleX(0);
               transform-origin: right;
               width: 100%;
-              height: em(0.105);
+              height: em(0.125);
               background: cyan;
               transition: transform 400ms;
-              transition-timing-function: cubic-bezier(0.6, -0.28, 0.735, 0.045);
+              transition-timing-function: cubic-bezier(
+                0.6,
+                -0.28,
+                0.735,
+                0.045
+              );
             }
 
             &:hover::after {
@@ -96,81 +106,6 @@
 
     .header__navbar.show {
       clip-path: circle(100% at 50% 50%);
-    }
-  }
-
-  .banner {
-    position: relative;
-    width: 100%;
-    height: 100vh;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    color: var(--dark);
-    z-index: 98;
-
-    &__text {
-      padding-top: em(225.75);
-      padding-left: em(80.95);
-      width: 100%;
-      height: 100%;
-
-      & h3:not(:last-of-type) {
-        font-size: em(26);
-        font-family: var(--font-terabite);
-        margin: 0 0 em(-10);
-        color: cyan;
-
-        &::after {
-          content: "";
-          width: 22vw;
-          height: em(0.555);
-          margin-left: em(6);
-          display: inline-block;
-          background: cyan;
-        }
-      }
-
-      h1 {
-        font-family: var(--font-terabite);
-        font-size: em(120);
-        text-transform: uppercase;
-        color: cyan;
-
-        @for $i from 1 through 4 {
-          span:nth-child(#{$i}) {
-            color: hsl($i * 25, 50%, 50%);
-          }
-        }
-      }
-
-      h3 {
-        font-family: var(--font-terabite);
-        font-size: em(26);
-        font-weight: 600;
-        letter-spacing: em(0.75);
-        margin: em(-20) em(0) em(26) em(0);
-        text-transform: uppercase;
-        color: cyan;
-      }
-    }
-
-    &__canvas {
-      padding-top: em(40.75);
-      width: 100%;
-      height: 100vh;
-    }
-  }
-
-  .child {
-    width: 100%;
-    height: 100vh;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-
-    &__button {
-      margin-top: em(75);
     }
   }
 }

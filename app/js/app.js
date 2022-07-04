@@ -1,17 +1,18 @@
 (function ($) {
   $(function () {
     "use strict";
-    $(".hamburger-menu").on("click", function (e) {
+
+    $(".hamburger").on("click", function (e) {
       $(this).toggleClass("opened");
       $(".header__navbar").toggleClass("show");
     });
   });
 
-  Scrollbar.use(OverscrollPlugin);
-  var scrlbr = Scrollbar.init(document.querySelector("#main"), custom);
+  const ovrscrll = Scrollbar.use(OverscrollPlugin);
+  const scrlbr = Scrollbar.init(document.querySelector("#main"), custom);
 
   const custom = {
-    damping: 1.75,
+    damping: 0.95,
   };
 
   var hdrfx = document.querySelector(".header");
@@ -23,7 +24,7 @@
 
   /* --------------------------- cursor magnet --------------------------- */
   var cerchio = document.querySelectorAll(
-    ".header__brand, .header__items, .link__button, .custom__button, .hamburger-menu"
+    ".header__brand, .hamburger, .link__button, .custom__button"
   );
   cerchio.forEach(function (elem) {
     $(document).on("mousemove touch", function (e) {
@@ -133,8 +134,8 @@
     $(".header__brand").hover(function () {
       $(".cursor").toggleClass("brand");
     });
-    $(".hamburger-menu").hover(function () {
-      $(".cursor").toggleClass("hamburger");
+    $(".hamburger").hover(function () {
+      $(".cursor").toggleClass("show__hamburger");
     });
   }
 
@@ -216,8 +217,8 @@
     controls = new THREE.OrbitControls(camera, renderer.domElement);
     controls.autoRotate = true;
     controls.autoRotateSpeed = 0.25;
-    controls.minDistance = 410.95;
-    controls.maxDistance = 410.95;
+    controls.minDistance = 440.75;
+    controls.maxDistance = 440.75;
     controls.enablePan = true;
 
     const loader = new THREE.TextureLoader();
@@ -249,20 +250,17 @@
     sphereBg = new THREE.Mesh(geometrySphereBg, materialSphereBg);
     scene.add(sphereBg);
 
-    /*    Moving Stars   */
+    /* moving stars */
     let starsGeometry = new THREE.Geometry();
-
     for (let i = 0; i < 50; i++) {
       let particleStar = randomPointSphere(150);
-
       particleStar.velocity = THREE.MathUtils.randInt(50, 200);
-
       particleStar.startX = particleStar.x;
       particleStar.startY = particleStar.y;
       particleStar.startZ = particleStar.z;
-
       starsGeometry.vertices.push(particleStar);
     }
+
     let starsMaterial = new THREE.PointsMaterial({
       size: 5,
       color: "#ffffff",
@@ -271,11 +269,12 @@
       map: textureStar,
       blending: THREE.AdditiveBlending,
     });
+
     starsMaterial.depthWrite = false;
     stars = new THREE.Points(starsGeometry, starsMaterial);
     scene.add(stars);
 
-    /*    Fixed Stars   */
+    /* fixed stars */
     function createStars(texture, size, total) {
       let pointGeometry = new THREE.Geometry();
       let pointMaterial = new THREE.PointsMaterial({
@@ -291,6 +290,7 @@
       }
       return new THREE.Points(pointGeometry, pointMaterial);
     }
+
     scene.add(createStars(texture1, 15, 20));
     scene.add(createStars(texture2, 5, 5));
     scene.add(createStars(texture4, 7, 5));
@@ -306,14 +306,12 @@
   }
 
   function animate() {
-    //Stars  Animation
+    /* stars animation */
     stars.geometry.vertices.forEach(function (v) {
       v.x += (0 - v.x) / v.velocity;
       v.y += (0 - v.y) / v.velocity;
       v.z += (0 - v.z) / v.velocity;
-
       v.velocity -= 0.3;
-
       if (v.x <= 5 && v.x >= -5 && v.z <= 5 && v.z >= -5) {
         v.x = v.startX;
         v.y = v.startY;
@@ -322,7 +320,7 @@
       }
     });
 
-    //Nucleus Animation
+    /* nucleus animation */
     nucleus.geometry.vertices.forEach(function (v) {
       let time = Date.now();
       v.normalize();
@@ -336,13 +334,14 @@
           blobScale;
       v.multiplyScalar(distance);
     });
+
     nucleus.geometry.verticesNeedUpdate = true;
     nucleus.geometry.normalsNeedUpdate = true;
     nucleus.geometry.computeVertexNormals();
     nucleus.geometry.computeFaceNormals();
     nucleus.rotation.y += 0.002;
 
-    //Sphere Beckground Animation
+    /* sphere background animation */
     sphereBg.rotation.x += 0.002;
     sphereBg.rotation.y += 0.002;
     sphereBg.rotation.z += 0.002;
@@ -353,33 +352,17 @@
     requestAnimationFrame(animate);
   }
 
-  /*     Resize     */
+  /* resize */
   window.addEventListener("resize", () => {
     clearTimeout(timeout_Debounce);
     timeout_Debounce = setTimeout(onWindowResize, 70);
   });
+
   function onWindowResize() {
     camera.aspect = container.clientWidth / container.clientHeight;
     camera.updateProjectionMatrix();
     renderer.setSize(container.clientWidth, container.clientHeight);
   }
 
-  /*     Fullscreen btn     */
-  // let fullscreen;
-  // let fsEnter = document.getElementById('fullscr');
-  // fsEnter.addEventListener('click', function (e) {
-  //     e.preventDefault();
-  //     if (!fullscreen) {
-  //         fullscreen = true;
-  //         document.documentElement.requestFullscreen();
-  //         fsEnter.innerHTML = "Exit Fullscreen";
-  //     }
-  //     else {
-  //         fullscreen = false;
-  //         document.exitFullscreen();
-  //         fsEnter.innerHTML = "Go Fullscreen";
-  //     }
-  // });
-
-  // particlesJS.load("particles-js", "particles.json", function () {});
+  particlesJS.load("particles-js", "particles.json", function () {});
 })(jQuery);
