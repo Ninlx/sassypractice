@@ -143,7 +143,7 @@
   var width = 100,
     perfData = window.performance.timing, // The PerformanceTiming interface represents timing-related performance information for the given page.
     EstimatedTime = -(perfData.loadEventEnd - perfData.navigationStart),
-    time = parseInt((EstimatedTime / 1000) % 60) * 60;
+    time = parseInt((EstimatedTime / 1000) % 20) * 20;
   $(".loadbar").animate(
     {
       width: width + "%",
@@ -217,8 +217,8 @@
     controls = new THREE.OrbitControls(camera, renderer.domElement);
     controls.autoRotate = true;
     controls.autoRotateSpeed = 0.25;
-    controls.minDistance = 440.75;
-    controls.maxDistance = 440.75;
+    controls.minDistance = 540.25;
+    controls.maxDistance = 540.25;
     controls.enablePan = true;
 
     const loader = new THREE.TextureLoader();

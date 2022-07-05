@@ -12,17 +12,20 @@
       font-family: var(--font-terabite);
       font-size: em(55);
       line-height: 0.9;
+      letter-spacing: em(2);
       color: cyan;
-      margin-top: em(70.95);
+      max-width: em(75);
+      margin-top: em(40.25);
     }
 
     p {
       font-family: var(--font-titillium);
       color: cyan;
+      max-width: em(600);
     }
   }
 
   &__image {
-    margin-top: em(100);
+    max-width: em(550);
   }
 }

@@ -1,0 +1,7 @@
+@use "../util" as *;
+
+#main .branding {
+  &__figure {
+    background: var(--primary);
+  }
+}
