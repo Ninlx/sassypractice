@@ -20,6 +20,14 @@
 
 ## }
 
+##### bootstrap breakpoints
+##### extra small                       <576px
+##### small                 sm          >=576px
+##### medium                md          >=768px
+##### large                 lg          >=992px
+##### extra large           xl          >=1200px
+##### super large           xxl         >=1400px
+
 ##### package.json file to download using node package manager
 
 ##### {

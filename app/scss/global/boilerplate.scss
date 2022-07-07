@@ -3,8 +3,7 @@
 *::-webkit-scrollbar,
 *::-webkit-scrollbar-thumb,
 *::-webkit-scrollbar-track {
-  display: none !important;
-  opacity: 0 !important;
+  display: none;
 }
 
 *::selection {
@@ -18,7 +17,7 @@
 * {
   border: none;
   outline: none;
-  cursor: none !important;
+  cursor: context-menu;
 }
 
 html {
