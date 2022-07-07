@@ -10,10 +10,24 @@
   color: var(--dark);
   z-index: 98;
 
-  &__text {
-    padding-top: em(340.75);
+  &__container {
     width: 100%;
     height: 100%;
+  }
+
+  &__row {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+  }
+
+  &__text {
+    width: 100%;
+    height: 100%;
+    padding-top: em(90);
+    padding-left: em(120);
 
     @include breakpoints-down(mb2) {
       padding-top: em(700);
@@ -60,16 +74,9 @@
     }
   }
 
-  #cnvscntnr {
+  &__canvas {
     width: 100%;
-    height: 100%;
+    height: 100vh;
     display: block;
-    padding-top: em(40.75);
-
-    canvas {
-      @include breakpoints-up(lap1) {
-        margin-right: em(-90);
-      }
-    }
   }
 }

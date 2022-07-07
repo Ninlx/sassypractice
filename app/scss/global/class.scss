@@ -7,6 +7,7 @@
   pointer-events: none;
   z-index: 9999;
   mix-blend-mode: difference;
+  animation: color 6s infinite;
 
   &::before {
     content: "";
@@ -17,11 +18,23 @@
     justify-content: center;
     align-items: center;
     border-radius: 50%;
-    background: var(--light);
-    border: em(1) solid var(--light);
-    transition: 300ms;
-    transition-timing-function: cubic-bezier(0.6, -0.28, 0.735, 0.045);
     transform: scale(0.15);
+    background: var(--light);
+    box-shadow: 0 0 em(20) cyan, 0 0 em(60) cyan, 0 0 em(100) cyan;
+    border: em(1) solid cyan;
+    transition: all 200ms;
+    transition-property: animation transform background filter border box-shadow;
+    transition-timing-function: cubic-bezier(0.6, -0.28, 0.735, 0.045);
+  }
+
+  @keyframes color {
+    0% {
+      filter: hue-rotate(0deg);
+    }
+
+    100% {
+      filter: hue-rotate(360deg);
+    }
   }
 }
 
@@ -29,24 +42,11 @@
   mix-blend-mode: unset;
 
   &::before {
+    content: "";
+    transform: scale(0.9);
+    filter: opacity(0.35);
     border: none;
-    transform: scale(0.95);
-    filter: opacity(0.55);
     background: linear-gradient(120deg, var(--danger), var(--orange));
-  }
-}
-
-.cursor.drag {
-  mix-blend-mode: unset;
-
-  &::before {
-    transform: scale(1);
-    background: var(--primary);
-    border-color: transparent;
-    content: "\ea23";
-    font-family: "LineIcons";
-    font-size: em(20);
-    color: #fff;
   }
 }
 
@@ -55,20 +55,20 @@
 
   &::before {
     content: "";
-    transform: scale(0.75);
-    filter: opacity(0.25);
+    transform: scale(0.9);
+    filter: opacity(0.35);
     border: none;
     background: linear-gradient(120deg, var(--primary), var(--danger));
   }
 }
 
-.cursor.brand {
+.cursor.logo {
   mix-blend-mode: unset;
 
   &::before {
     content: "";
-    transform: scale(0.95);
-    filter: opacity(0.55);
+    transform: scale(0.9);
+    filter: opacity(0.35);
     border: none;
     background: linear-gradient(120deg, var(--light), var(--primary));
   }
@@ -79,22 +79,22 @@
 
   &::before {
     content: "";
-    transform: scale(0.75);
-    filter: opacity(0.25);
+    transform: scale(0.9);
+    filter: opacity(0.35);
     border: none;
     background: linear-gradient(360deg, cyan, magenta);
   }
 }
 
-.cursor.figure {
+.cursor.brand {
   mix-blend-mode: unset;
 
   &::before {
     content: "";
-    transform: scale(0.95);
-    filter: opacity(0.25) blur(em(0.25));
+    transform: scale(0.9);
+    filter: opacity(0.35);
     border: none;
-    background: linear-gradient(45deg, grey, dodgerblue);
+    background: linear-gradient(45deg, cyan, var(--light));
   }
 }
 

@@ -18,10 +18,11 @@
   });
 
   /* cursor magnet  */
-  var cerchio = document.querySelectorAll(
+  var crsrmgnt = document.querySelectorAll(
     ".header__brand, .hamburger, .link__button, .custom__button"
   );
-  cerchio.forEach(function (elem) {
+
+  crsrmgnt.forEach(function (elem) {
     $(document).on("mousemove touch", function (e) {
       magnetize(elem, e);
     });
@@ -112,14 +113,28 @@
       this.on();
     }
   }
+
+  /* cursor faded */
+  const cursor = document.querySelector(".cursor");
+  var timeout;
+
+  window.addEventListener("mousemove", (e) => {
+    cursor.style.display = "block";
+    function mouseStopped() {
+      cursor.style.display = "none";
+    }
+    clearTimeout(timeout);
+    timeout = setTimeout(mouseStopped, 3000);
+  });
+
+  window.addEventListener("mouseout", (e) => {
+    cursor.style.display = "none";
+  });
+
   if ($(".cursor__conn").length > 0) {
     const cursor = new Cursor();
     cursor.init();
-
     /* cursor conditions */
-    $(".carousel-image-box").hover(function () {
-      $(".cursor").toggleClass("drag");
-    });
     $(".header__brand, .header__items").hover(function () {
       $(".cursor").toggleClass("navlinks");
     });
@@ -127,13 +142,13 @@
       $(".cursor").toggleClass("button");
     });
     $(".header__brand").hover(function () {
-      $(".cursor").toggleClass("brand");
+      $(".cursor").toggleClass("logo");
     });
     $(".hamburger").hover(function () {
       $(".cursor").toggleClass("show__hamburger");
     });
-    $("img").hover(function () {
-      $(".cursor").toggleClass("figure");
+    $(".brand").hover(function () {
+      $(".cursor").toggleClass("brand");
     });
   }
 
@@ -142,7 +157,7 @@
     /* the PerformanceTiming interface represents timing-related performance information for the given page. */
     perfData = window.performance.timing,
     EstimatedTime = -(perfData.loadEventEnd - perfData.navigationStart),
-    time = parseInt((EstimatedTime / 1000) % 20) * 20;
+    time = parseInt((EstimatedTime / 1000) % 60) * 60;
   $(".loadbar").animate(
     {
       width: width + "%",
@@ -224,8 +239,8 @@
     controls = new THREE.OrbitControls(camera, renderer.domElement);
     controls.autoRotate = true;
     controls.autoRotateSpeed = 0.25;
-    controls.minDistance = 540.25;
-    controls.maxDistance = 540.25;
+    controls.minDistance = 440.75;
+    controls.maxDistance = 440.75;
     controls.enablePan = true;
 
     /* texture */
