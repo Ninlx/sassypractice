@@ -2,6 +2,7 @@
 
 #main .branding {
   width: 100%;
+<<<<<<< HEAD
   height: 100vh;
   display: flex;
   align-items: center;
@@ -30,5 +31,12 @@
         margin-bottom: em(0);
       }
     }
+=======
+  height: 100%;
+  padding-bottom: em(300) !important;
+
+  &__figure {
+    padding: em(10);
+>>>>>>> 43a082c05752e7ecced06cad735b700c2192ac13
   }
 }
