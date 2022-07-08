@@ -27,6 +27,7 @@
       magnetize(elem, e);
     });
   });
+
   function magnetize(el, e) {
     var mX = e.pageX,
       mY = e.pageY;
@@ -53,6 +54,7 @@
       item.removeClass("magnet");
     }
   }
+
   function calculateDistance(elem, mouseX, mouseY) {
     return Math.floor(
       Math.sqrt(
@@ -61,6 +63,7 @@
       )
     );
   }
+
   function lerp(a, b, n) {
     return (1 - n) * a + n * b;
   }
@@ -171,7 +174,6 @@
       increment = end > start ? 1 : -1,
       stepTime = Math.abs(Math.floor(duration / range)),
       obj = $(id);
-
     var timer = setInterval(function () {
       current += increment;
       $(obj).text(current + "%");
@@ -180,6 +182,7 @@
       }
     }, stepTime);
   }
+
   setTimeout(function () {
     $("body").addClass("page-loaded");
   }, time);
@@ -280,6 +283,7 @@
       particleStar.startZ = particleStar.z;
       starsGeometry.vertices.push(particleStar);
     }
+
     let starsMaterial = new THREE.PointsMaterial({
       size: 5,
       color: "#ffffff",
